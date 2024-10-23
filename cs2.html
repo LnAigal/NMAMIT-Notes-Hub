@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit-2</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://cdn.glitch.global/1c6ec95d-7ebd-471e-87b2-228eb65c21d1/wallpaperflare.com_wallpaper.jpg?v=1728621572018');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        header {
+            background: white;
+            color: #2193b0;
+            padding: 20px 0;
+            border-bottom: 2px solid #2193b0;
+            border-radius: 8px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            text-align: left;
+            background: transparent;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #fff;
+        }
+        .pdf-link {
+            display: block;
+            margin: 15px 0;
+            padding: 15px;
+            background: linear-gradient(to right, #6dd5ed, #2193b0);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: transform 0.3s, opacity 0.3s;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.2em;
+        }
+        .pdf-link:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+        .search-section {
+            margin-bottom: 20px;
+        }
+        .search-input {
+            padding: 10px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background: linear-gradient(to right, #6dd5ed, #2193b0);
+            color: white;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            transition: opacity 0.3s, transform 0.3s;
+            width: 100%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 0.9em;
+        }
+        .back-button:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+        .available-pdfs {
+            font-size: 1.5em;
+            margin: 20px 0;
+            color: white;
+        }
+        .explore-text {
+            font-size: 1em;
+            margin-top: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Unit-2</h1>
+    </header>
+    <div class="content">
+        <div class="search-section">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search..." oninput="filterLinks()">
+        </div>
+        
+        <h3 class="available-pdfs">Available PDFs:</h3>
+        <a href="https://cdn.glitch.global/1c6ec95d-7ebd-471e-87b2-228eb65c21d1/4.%20Tools%20and%20methods%20used%20in%20cybercrime.pdf?v=1729094144658" class="pdf-link" data-keywords="Tools and methods used in cybercrime">Tools and methods used in cybercrime</a>
+        <a href="https://cdn.glitch.global/1c6ec95d-7ebd-471e-87b2-228eb65c21d1/5.Phishing%20and%20Identity%20Theft.pdf?v=1729094207823" class="pdf-link" data-keywords="Phishing and Identity Theft">Phishing and Identity Theft</a>
+        <p class="explore-text">Explore these resources for a deeper understanding of Cyber Security.</p>
+        
+        <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    <footer>
+        <p>&copy; 2024 PDF Download Center</p>
+    </footer>
+
+    <script>
+        function filterLinks() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const links = document.querySelectorAll('.pdf-link');
+            links.forEach(link => {
+                const keywords = link.getAttribute('data-keywords') ? link.getAttribute('data-keywords').toLowerCase() : '';
+                link.style.display = keywords.includes(input) ? 'block' : 'none';
+            });
+        }
+
+        function goBack() {
+            window.location.href = 'cs.html'; // Navigate back to cs.html
+        }
+    </script>
+</body>
+</html>
