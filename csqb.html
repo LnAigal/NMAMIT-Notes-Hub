@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ And Question Bank</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://cdn.glitch.global/1c6ec95d-7ebd-471e-87b2-228eb65c21d1/wallpaperflare.com_wallpaper.jpg?v=1728621572018');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        header {
+            background: white;
+            color: #2193b0;
+            padding: 20px 0;
+            border-bottom: 2px solid #2193b0;
+            border-radius: 8px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            text-align: left;
+            background: transparent;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #fff;
+        }
+        .pdf-link {
+            display: block;
+            margin: 15px 0;
+            padding: 15px;
+            background: linear-gradient(to right, #6dd5ed, #2193b0);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: transform 0.3s, opacity 0.3s;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.2em;
+        }
+        .pdf-link:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+        .search-section {
+            margin-bottom: 20px;
+        }
+        .search-input {
+            padding: 10px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background: linear-gradient(to right, #6dd5ed, #2193b0);
+            color: white;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            transition: opacity 0.3s, transform 0.3s;
+            width: 100%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 0.9em;
+        }
+        .back-button:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+        .available-pdfs {
+            font-size: 1.5em;
+            margin: 20px 0;
+            color: white;
+        }
+        .explore-text {
+            font-size: 1em;
+            margin-top: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MCQ And Question Bank</h1>
+    </header>
+    <div class="content">
+        <div class="search-section">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search..." oninput="filterLinks()">
+        </div>
+        
+        <h3 class="available-pdfs">Available PDFs:</h3>
+        <a href="https://cdn.glitch.global/1c6ec95d-7ebd-471e-87b2-228eb65c21d1/MCQ_Unit_1.pdf?v=1729093532271" class="pdf-link" data-keywords="MCQ Unit-1">MCQ Unit-1</a>
+        <a href="https://cdn.glitch.global/1c6ec95d-7ebd-471e-87b2-228eb65c21d1/Cybersecurity_Unit-I_QB.pdf?v=1729093539792" class="pdf-link" data-keywords="Unit-1 Question Bank">Unit-1 Question Bank</a>
+        <a href="https://cdn.glitch.global/1c6ec95d-7ebd-471e-87b2-228eb65c21d1/MCQ_Unit_2.pdf?v=1729093547388" class="pdf-link" data-keywords="MCQ Unit-2">MCQ Unit-2</a>
+        <a href="https://cdn.glitch.global/1c6ec95d-7ebd-471e-87b2-228eb65c21d1/Cybersecurity_Unit-II_QB.pdf?v=1729093553477" class="pdf-link" data-keywords="Unit-2 Question Bank">Unit-2 Question Bank</a>
+        <a href="https://cdn.glitch.global/1c6ec95d-7ebd-471e-87b2-228eb65c21d1/MCQ_Unit_3.pdf?v=1729093560938" class="pdf-link" data-keywords="MCQ Unit-3">MCQ Unit-3</a>
+        <a href="https://cdn.glitch.global/1c6ec95d-7ebd-471e-87b2-228eb65c21d1/Cybersecurity_Unit-III_QB.pdf?v=1729093569668" class="pdf-link" data-keywords="Unit-3 Question Bank">Unit-3 Question Bank</a>
+        <p class="explore-text">Explore these resources for a deeper understanding of Cyber Security.</p>
+        
+        <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    <footer>
+        <p>&copy; 2024 PDF Download Center</p>
+    </footer>
+
+    <script>
+        function filterLinks() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const links = document.querySelectorAll('.pdf-link');
+            links.forEach(link => {
+                const keywords = link.getAttribute('data-keywords') ? link.getAttribute('data-keywords').toLowerCase() : '';
+                link.style.display = keywords.includes(input) ? 'block' : 'none';
+            });
+        }
+
+        function goBack() {
+            window.location.href = 'cs.html'; // Navigate back to cs.html
+        }
+    </script>
+</body>
+</html>
