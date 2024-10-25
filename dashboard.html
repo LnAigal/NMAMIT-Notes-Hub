@@ -8,6 +8,11 @@
     <title>Dashboard - NOTES</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
         body {
             font-family: 'Arial', sans-serif;
             background-image: url('https://cdn.glitch.global/1c6ec95d-7ebd-471e-87b2-228eb65c21d1/wallpaperflare.com_wallpaper.jpg?v=1728621572012018');
@@ -17,6 +22,8 @@
             padding: 20px;
             text-align: center;
             color: #fff;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
         }
 
         header {
@@ -26,17 +33,22 @@
             border-bottom: 2px solid #2193b0;
             border-radius: 8px;
             font-family: 'Roboto', sans-serif;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 0.5s;
         }
+
         h1 {
             margin: 0;
             font-size: 2.5em;
         }
+
         .container {
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
             text-align: left;
         }
+
         .welcome-box {
             background: linear-gradient(to right, #4e92c2, #80d0c7);
             border-radius: 10px;
@@ -44,32 +56,34 @@
             margin-bottom: 20px;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
             text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 0.8s;
         }
-        .welcome-box p {
-            margin: 10px 0;
-            color: white;
-            font-size: 1.2em;
-            line-height: 1.5;
-        }
-        .search-container {
-            margin: 20px 0;
-            text-align: center;
-        }
-        input[type="text"] {
-            padding: 10px;
-            width: 70%;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .menu {
-            margin: 20px 0;
-        }
+
         .menu-item {
             display: flex;
             align-items: center;
             margin: 10px 0;
             justify-content: center;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
         }
+
+        .menu-item:nth-child(1) { animation-delay: 1s; }
+        .menu-item:nth-child(2) { animation-delay: 1.1s; }
+        .menu-item:nth-child(3) { animation-delay: 1.2s; }
+        .menu-item:nth-child(4) { animation-delay: 1.3s; }
+        .menu-item:nth-child(5) { animation-delay: 1.4s; }
+        .menu-item:nth-child(6) { animation-delay: 1.5s; }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #fff;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 2s;
+        }
+        
         button {
             padding: 15px;
             width: 45%;
@@ -81,24 +95,20 @@
             transition: opacity 0.3s, transform 0.3s;
             margin-right: 10px;
         }
+
         button:hover {
             opacity: 0.8;
             transform: scale(1.05);
         }
-        footer {
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #fff;
-        }
     </style>
     <script>
         const courses = [
-            { name: 'Basic Electronics', code: 'EC-1001-1', link: 'be.html' },
-            { name: 'Constitution of India', code: 'COI-1001', link: 'coi.html' },
-            { name: 'Cyber Security', code: 'CS-2001', link: 'cs.html' },
-            { name: 'Quantum Computing', code: 'QC-3001', link: 'qcmp.html' },
-            { name: 'Problem Solving through Programming', code: 'PSP-4001', link: 'psp.html' },
-            { name: 'Technical English', code: 'TE-5001', link: 'te.html' }
+            { name: 'Basic Electronics', code: 'EC1001-1', link: 'be.html' },
+            { name: 'Constitution of India', code: 'HU1002-1', link: 'coi.html' },
+            { name: 'Cyber Security', code: 'IS1101-1', link: 'cs.html' },
+            { name: 'Quantum Computing and Modern Physics', code: 'PH1004-1', link: 'qcmp.html' },
+            { name: 'Problem Solving through Programming', code: 'CS1001-2', link: 'psp.html' },
+            { name: 'Technical English', code: 'HU1001-1', link: 'te.html' }
         ];
 
         function filterCourses() {
@@ -121,7 +131,6 @@
                 menuList.appendChild(menuItem);
             });
 
-            // If no courses match, show a message
             if (filteredCourses.length === 0) {
                 menuList.innerHTML = '<p>No courses found. Please try a different search.</p>';
             }
@@ -144,7 +153,7 @@
 
         <h3 class="available-pdfs">Available Courses:</h3>
         <div class="menu" id="menuList">
-            <!-- Course buttons will be dynamically inserted here -->
+            <!-- Initial hard-coded course buttons for initial view -->
             <div class="menu-item">
                 <button onclick="window.location.href='be.html'">Basic Electronics</button>
                 <button onclick="window.location.href='be.html'">EC1001-1</button>
