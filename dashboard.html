@@ -100,6 +100,25 @@
             opacity: 0.8;
             transform: scale(1.05);
         }
+
+        .search-container {
+            margin: 20px 0;
+        }
+
+        input[type="text"] {
+            width: 70%; /* Adjust the width as needed */
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #2193b0;
+            outline: none;
+        }
     </style>
     <script>
         const courses = [
