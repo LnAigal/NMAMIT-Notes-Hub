@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,7 @@
             text-align: center;
             color: #fff;
         }
+
         header {
             background: white;
             color: #2193b0;
@@ -22,10 +24,12 @@
             border-bottom: 2px solid #2193b0;
             border-radius: 8px;
         }
+
         h1 {
             margin: 0;
             font-size: 2.5em;
         }
+
         .content {
             max-width: 800px;
             margin: 20px auto;
@@ -35,34 +39,43 @@
             text-align: left;
             background: transparent;
         }
+
         footer {
             margin-top: 20px;
             font-size: 0.9em;
             color: #fff;
         }
+
         .pdf-link {
             display: block;
             margin: 15px 0;
-            padding: 15px; /* Same padding for all buttons */
+            padding: 15px;
+            /* Same padding for all buttons */
             background: linear-gradient(to right, #6dd5ed, #2193b0);
             color: white;
             text-decoration: none;
             border-radius: 5px;
             text-align: center;
             transition: transform 0.3s, opacity 0.3s;
-            width: 100%; /* Set width to 100% */
-            max-width: 500px; /* Consistent max-width */
+            width: 100%;
+            /* Set width to 100% */
+            max-width: 500px;
+            /* Consistent max-width */
             margin-left: auto;
             margin-right: auto;
-            font-size: 1.2em; /* Consistent font size */
+            font-size: 1.2em;
+            /* Consistent font size */
         }
+
         .pdf-link:hover {
             opacity: 0.8;
             transform: scale(1.05);
         }
+
         .search-section {
             margin-bottom: 20px;
         }
+
         .search-input {
             padding: 10px;
             width: 80%;
@@ -70,6 +83,7 @@
             border-radius: 4px;
             font-size: 1em;
         }
+
         .back-button {
             margin-top: 20px;
             padding: 10px 15px;
@@ -80,21 +94,27 @@
             cursor: pointer;
             text-align: center;
             transition: opacity 0.3s, transform 0.3s;
-            width: 100%; /* Set width to 100% */
-            max-width: 200px; /* Smaller max-width for the back button */
+            width: 100%;
+            /* Set width to 100% */
+            max-width: 200px;
+            /* Smaller max-width for the back button */
             margin-left: auto;
             margin-right: auto;
-            font-size: 0.9em; /* Smaller font size for back button */
+            font-size: 0.9em;
+            /* Smaller font size for back button */
         }
+
         .back-button:hover {
             opacity: 0.8;
             transform: scale(1.05);
         }
+
         .available-pdfs {
             font-size: 1.5em;
             margin: 20px 0;
             color: white;
         }
+
         .explore-text {
             font-size: 1em;
             margin-top: 10px;
@@ -102,6 +122,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Quantum Computing and Modern Physics Notes</h1>
@@ -110,17 +131,23 @@
         <div class="search-section">
             <input type="text" class="search-input" id="searchInput" placeholder="Search..." oninput="filterLinks()">
         </div>
-        
+
         <h3 class="available-pdfs">Available PDFs:</h3>
-        <a href="https://drive.google.com/file/d/1_R7inl9coYHD6ZdMAeosE63F_ZaKr_1O/view?usp=sharing" class="pdf-link" data-keywords="syllabus">Syllabus</a>
-        
-        <button class="pdf-link" onclick="window.location.href='qcmp1.html'" data-keywords="Quantum Computing">Quantum Computing</button>
-        <button class="pdf-link" onclick="window.location.href='qcmp2.html'" data-keywords="Electrical Properties of Materials">Electrical Properties of Materials</button>
-        <button class="pdf-link" onclick="window.location.href='qcmp3.html'" data-keywords="Photonics">Photonics</button>
-        <button class="pdf-link" onclick="window.location.href='qcmpqb.html'" data-keywords="MCQ And Question Bank">MCQ And Question Bank</button>
-        
-        <p class="explore-text">Feel free to explore these resources for a deeper understanding of Quantum Computing and Modern Physics Notes.</p>
-        
+        <a href="https://drive.google.com/file/d/1_R7inl9coYHD6ZdMAeosE63F_ZaKr_1O/view?usp=sharing" class="pdf-link"
+            data-keywords="syllabus">Syllabus</a>
+
+        <button class="pdf-link" onclick="window.location.href='qcmp1.html'" data-keywords="Quantum Computing">Quantum
+            Computing</button>
+        <button class="pdf-link" onclick="window.location.href='qcmp2.html'"
+            data-keywords="Electrical Properties of Materials">Electrical Properties of Materials</button>
+        <button class="pdf-link" onclick="window.location.href='qcmp3.html'"
+            data-keywords="Photonics">Photonics</button>
+        <button class="pdf-link" onclick="window.location.href='qcmpqb.html'" data-keywords="MCQ And Question Bank">MCQ
+            And Question Bank</button>
+
+        <p class="explore-text">Feel free to explore these resources for a deeper understanding of Quantum Computing and
+            Modern Physics Notes.</p>
+
         <button class="back-button" onclick="goBack()">Back</button>
     </div>
     <footer>
@@ -142,4 +169,5 @@
         }
     </script>
 </body>
+
 </html>

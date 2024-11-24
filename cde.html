@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
             text-align: center;
             color: #fff;
         }
+
         header {
             background: rgba(255, 255, 255, 0.9);
             color: #2193b0;
@@ -20,10 +22,12 @@
             border-bottom: 2px solid #2193b0;
             border-radius: 8px;
         }
+
         h1 {
             margin: 0;
             font-size: 2.5em;
         }
+
         .content {
             max-width: 800px;
             margin: 20px auto;
@@ -33,11 +37,13 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             text-align: left;
         }
+
         footer {
             margin-top: 20px;
             font-size: 0.9em;
             color: #fff;
         }
+
         .pdf-link {
             display: block;
             margin: 15px 0;
@@ -49,19 +55,23 @@
             text-align: center;
             transition: transform 0.3s, opacity 0.3s;
         }
+
         .pdf-link:hover {
             opacity: 0.8;
             transform: scale(1.05);
         }
+
         .search-section {
             margin-bottom: 20px;
         }
+
         .search-input {
             padding: 10px;
             width: 80%;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
+
         .back-button {
             margin-top: 20px;
             padding: 10px 15px;
@@ -73,10 +83,12 @@
             text-align: center;
             transition: opacity 0.3s, transform 0.3s;
         }
+
         .back-button:hover {
             opacity: 0.8;
             transform: scale(1.05);
         }
+
         .available-pdfs {
             background: linear-gradient(to right, #6dd5ed, #2193b0);
             -webkit-background-clip: text;
@@ -84,6 +96,7 @@
             font-size: 1.5em;
             margin: 20px 0;
         }
+
         .explore-text {
             background: linear-gradient(to right, #6dd5ed, #2193b0);
             -webkit-background-clip: text;
@@ -93,6 +106,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>CDE Notes</h1>
@@ -101,14 +115,14 @@
         <div class="search-section">
             <input type="text" class="search-input" id="searchInput" placeholder="Search..." oninput="filterLinks()">
         </div>
-        
+
         <h3 class="available-pdfs">Available PDFs:</h3>
         <a href="cde_notes_1.pdf" class="pdf-link" data-keywords="note1">CDE Note 1</a>
         <a href="cde_notes_2.pdf" class="pdf-link" data-keywords="note2">CDE Note 2</a>
         <a href="cde_notes_3.pdf" class="pdf-link" data-keywords="note3">CDE Note 3</a>
-        
+
         <p class="explore-text">Feel free to explore these resources for a deeper understanding of CDE.</p>
-        
+
         <button class="back-button" onclick="goBack()">Back</button>
     </div>
     <footer>
@@ -130,4 +144,5 @@
         }
     </script>
 </body>
+
 </html>

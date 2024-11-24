@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,7 @@
             text-align: center;
             color: #fff;
         }
+
         header {
             background: white;
             color: #2193b0;
@@ -22,10 +24,12 @@
             border-bottom: 2px solid #2193b0;
             border-radius: 8px;
         }
+
         h1 {
             margin: 0;
             font-size: 2.5em;
         }
+
         .content {
             max-width: 800px;
             margin: 20px auto;
@@ -35,11 +39,13 @@
             text-align: left;
             background: transparent;
         }
+
         footer {
             margin-top: 20px;
             font-size: 0.9em;
             color: #fff;
         }
+
         .pdf-link {
             display: block;
             margin: 15px 0;
@@ -56,13 +62,16 @@
             margin-right: auto;
             font-size: 1.2em;
         }
+
         .pdf-link:hover {
             opacity: 0.8;
             transform: scale(1.05);
         }
+
         .search-section {
             margin-bottom: 20px;
         }
+
         .search-input {
             padding: 10px;
             width: 80%;
@@ -70,6 +79,7 @@
             border-radius: 4px;
             font-size: 1em;
         }
+
         .back-button {
             margin-top: 20px;
             padding: 10px 15px;
@@ -86,15 +96,18 @@
             margin-right: auto;
             font-size: 0.9em;
         }
+
         .back-button:hover {
             opacity: 0.8;
             transform: scale(1.05);
         }
+
         .available-pdfs {
             font-size: 1.5em;
             margin: 20px 0;
             color: white;
         }
+
         .explore-text {
             font-size: 1em;
             margin-top: 10px;
@@ -102,6 +115,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Unit-2</h1>
@@ -110,12 +124,14 @@
         <div class="search-section">
             <input type="text" class="search-input" id="searchInput" placeholder="Search..." oninput="filterLinks()">
         </div>
-        
+
         <h3 class="available-pdfs">Available PDFs:</h3>
-        <a href="https://drive.google.com/file/d/1xsGllW91B9vuiwd9Hs2sUd2iL5hm7A0U/view?usp=sharing" class="pdf-link" data-keywords="Tools and methods used in cybercrime">Tools and methods used in cybercrime</a>
-        <a href="https://drive.google.com/file/d/1y9gfhTmNu2CyRtRc0e3KzRdph-yvSdsr/view?usp=sharing" class="pdf-link" data-keywords="Phishing and Identity Theft">Phishing and Identity Theft</a>
+        <a href="https://drive.google.com/file/d/1xsGllW91B9vuiwd9Hs2sUd2iL5hm7A0U/view?usp=sharing" class="pdf-link"
+            data-keywords="Tools and methods used in cybercrime">Tools and methods used in cybercrime</a>
+        <a href="https://drive.google.com/file/d/1y9gfhTmNu2CyRtRc0e3KzRdph-yvSdsr/view?usp=sharing" class="pdf-link"
+            data-keywords="Phishing and Identity Theft">Phishing and Identity Theft</a>
         <p class="explore-text">Explore these resources for a deeper understanding of Cyber Security.</p>
-        
+
         <button class="back-button" onclick="goBack()">Back</button>
     </div>
     <footer>
@@ -137,4 +153,5 @@
         }
     </script>
 </body>
+
 </html>

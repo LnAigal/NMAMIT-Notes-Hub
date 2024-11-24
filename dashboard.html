@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <style>
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
+
         body {
             font-family: 'Arial', sans-serif;
             background-image: url('https://cdn.glitch.global/1c6ec95d-7ebd-471e-87b2-228eb65c21d1/wallpaperflare.com_wallpaper.jpg?v=1728621572012018');
@@ -69,12 +77,29 @@
             animation: fadeIn 1s ease forwards;
         }
 
-        .menu-item:nth-child(1) { animation-delay: 1s; }
-        .menu-item:nth-child(2) { animation-delay: 1.1s; }
-        .menu-item:nth-child(3) { animation-delay: 1.2s; }
-        .menu-item:nth-child(4) { animation-delay: 1.3s; }
-        .menu-item:nth-child(5) { animation-delay: 1.4s; }
-        .menu-item:nth-child(6) { animation-delay: 1.5s; }
+        .menu-item:nth-child(1) {
+            animation-delay: 1s;
+        }
+
+        .menu-item:nth-child(2) {
+            animation-delay: 1.1s;
+        }
+
+        .menu-item:nth-child(3) {
+            animation-delay: 1.2s;
+        }
+
+        .menu-item:nth-child(4) {
+            animation-delay: 1.3s;
+        }
+
+        .menu-item:nth-child(5) {
+            animation-delay: 1.4s;
+        }
+
+        .menu-item:nth-child(6) {
+            animation-delay: 1.5s;
+        }
 
         footer {
             margin-top: 20px;
@@ -83,7 +108,7 @@
             opacity: 0;
             animation: fadeIn 1s ease forwards 2s;
         }
-        
+
         button {
             padding: 15px;
             width: 45%;
@@ -106,7 +131,8 @@
         }
 
         input[type="text"] {
-            width: 70%; /* Adjust the width as needed */
+            width: 70%;
+            /* Adjust the width as needed */
             padding: 10px;
             border-radius: 5px;
             border: 1px solid #ccc;
@@ -135,8 +161,8 @@
             const menuList = document.getElementById('menuList');
             menuList.innerHTML = ''; // Clear current list
 
-            const filteredCourses = courses.filter(course => 
-                course.name.toLowerCase().includes(searchInput) || 
+            const filteredCourses = courses.filter(course =>
+                course.name.toLowerCase().includes(searchInput) ||
                 course.code.toLowerCase().includes(searchInput)
             );
 
@@ -156,6 +182,7 @@
         }
     </script>
 </head>
+
 <body>
     <header>
         <h1>Welcome to the Dashboard</h1>
@@ -203,4 +230,5 @@
         <p>&copy; 2024 Notes For NMAMIT's by NMAMITIAN</p>
     </footer>
 </body>
+
 </html>
