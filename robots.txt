@@ -1,2 +1,5 @@
 User-agent: *
 Allow: /sitemap.xml
+Disallow: /404.html
+Disallow: /500.html
+Disallow: /error.html
