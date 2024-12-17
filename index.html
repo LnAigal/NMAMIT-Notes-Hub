@@ -162,6 +162,36 @@
             outline: none;
         }
     </style>
+    <style>
+        .marquee-container {
+          width: 100%;
+          overflow: hidden;
+          white-space: nowrap;
+          background-color: #f1f1f1;
+          padding: 5px 0;
+          position: relative;
+        }
+    
+        .marquee {
+          display: inline-block;
+          animation: scroll-left 10s linear infinite;
+        }
+    
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+    
+        .marquee a {
+          color: blue;
+          text-decoration: underline;
+          margin-left: 10px;
+        }
+      </style>
     <script>
         const courses = [
             { name: 'Basic Electronics', code: 'EC1001-1', link: 'be.html' },
@@ -214,6 +244,11 @@
                 Warning:These Notes are designed for IT Courses make sure that its Relevent for Your Course
             </p>
         </div>
+        <div class="marquee-container">
+            <div class="marquee">
+            <a href="cs.html">CLICK HERE to access CYBER SECURITY.</a>
+        </div>
+        </div>
             <div class="search-container">
             <input type="text" id="searchInput" placeholder="Search Course or Course Code" onkeyup="filterCourses()" />
         </div>
@@ -252,7 +287,7 @@
         </div>
     </div>
     <footer>
-        <p>Last Updated on 17th December 2024 at 2:29 pm </p>
+        <p>Last Updated on 17th December 2024 at 9:17 pm </p>
         <p>&copy; 2024 Notes For NMAMIT's by NMAMITIAN</p>
     </footer>
 </body>
