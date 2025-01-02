@@ -24,7 +24,7 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-image: url('https://cdn.glitch.global/1c6ec95d-7ebd-471e-87b2-228eb65c21d1/wallpaperflare.com_wallpaper.jpg?v=1728621572012018');
+            background-color: #fff3eb;
             background-size: cover;
             background-position: center;
             margin: 0;
@@ -36,11 +36,11 @@
         }
 
         header {
-            background: rgba(255, 255, 255, 0.9);
-            color: #ff0404;
+            background-color: #fff3db;
+            color: #ff0000;
             text-decoration-line:#000000;
             padding: 20px 0;
-            border-bottom: 2px solid #740808;
+            border-bottom: 2px solid #e43131;
             border-radius: 8px;
             font-family: 'Roboto', sans-serif;
             opacity: 0;
@@ -51,33 +51,14 @@
             margin: 0;
             font-size: 2.5em;
         }
-
+        h3{
+            color: #000000;  
+        }
         .container {
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
             text-align: left;
-        }
-
-        .welcome-box {
-            background: linear-gradient(to right, #4e92c2, #081174);
-            border-radius: 10px;
-            padding: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            opacity: 0;
-            animation: fadeIn 1s ease forwards 0.8s;
-        }
-        .warning-box {
-            background: linear-gradient(to right, hsl(0, 100%, 50%), #081174);
-            border-radius: 10px;
-            padding: 1px;
-            margin-bottom: 20px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            opacity: 0;
-            animation: fadeIn 1s ease forwards 0.8s;
         }
         .menu-item {
             display: flex;
@@ -120,7 +101,7 @@
         footer {
             margin-top: 20px;
             font-size: 0.9em;
-            color: #fff;
+            color: #000000;
             opacity: 0;
             animation: fadeIn 1s ease forwards 2s;
         }
@@ -128,7 +109,7 @@
         button {
             padding: 15px;
             width: 45%;
-            background: linear-gradient(to right, #6dd5ed, #081174);
+            background: linear-gradient(to right, #ff6a00, #ee0979);
             color: rgb(255, 255, 255);
             border: none;
             border-radius: 5px;
@@ -147,7 +128,7 @@
         }
 
         input[type="text"] {
-            width: 70%;
+            width: 75%;
             /* Adjust the width as needed */
             padding: 10px;
             border-radius: 5px;
@@ -235,20 +216,6 @@
     <header>
         <h1>NMAMIT NOTES HUB</h1>
     </header>
-    <div class="container">
-        <div class="welcome-box">
-            <p>🎉 Welcome, NMAMITian!</p>
-            <p>Explore our extensive collection of resources tailored for your courses.</p>
-        </div>
-        <div class="warning-box">
-            <p>
-                Warning:These Notes are designed for IT Courses make sure that its Relevent for Your Course
-            </p>
-        </div>
-        <div class="marquee-container">
-            <div class="marquee">
-            <a href="te.html">CLICK HERE to access ENGLISH.</a>
-        </div>
         </div>
             <div class="search-container">
             <input type="text" id="searchInput" placeholder="Search Course or Course Code" onkeyup="filterCourses()" />
@@ -288,7 +255,6 @@
         </div>
     </div>
     <footer>
-        <p>Last Updated on 19th December 2024 at 12:12 pm </p>
         <p>&copy; 2024 Notes For NMAMIT's by NMAMITIAN</p>
     </footer>
 </body>
