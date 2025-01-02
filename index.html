@@ -24,7 +24,7 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #ffffff;
+            background-color: #fff3eb;
             background-size: cover;
             background-position: center;
             margin: 0;
@@ -36,17 +36,16 @@
         }
 
         header {
-            background: rgba(255, 255, 255, 0.9);
-            color: #ff0404;
+            background-color: #fff3db;
+            color: #ff0000;
             text-decoration-line:#000000;
             padding: 20px 0;
-            border-bottom: 2px solid #740808;
+            border-bottom: 2px solid #e43131;
             border-radius: 8px;
             font-family: 'Roboto', sans-serif;
             opacity: 0;
             animation: fadeIn 1s ease forwards 0.5s;
         }
-
         h1 {
             margin: 0;
             font-size: 2.5em;
@@ -60,7 +59,7 @@
         }
 
         .welcome-box {
-            background: linear-gradient(to right, #4e92c2, #081174);
+            background: linear-gradient(to right, #4caf50, #087f23);
             border-radius: 10px;
             padding: 10px;
             margin-bottom: 20px;
@@ -120,15 +119,15 @@
         footer {
             margin-top: 20px;
             font-size: 0.9em;
-            color: #fff;
+            color: #000000;
             opacity: 0;
             animation: fadeIn 1s ease forwards 2s;
         }
 
         button {
             padding: 15px;
-            width: 45%;
-            background: linear-gradient(to right, #6dd5ed, #081174);
+            width: 75%;
+            background:  linear-gradient(to right, #ff6a00, #ee0979);
             color: rgb(255, 255, 255);
             border: none;
             border-radius: 5px;
@@ -141,94 +140,7 @@
             opacity: 0.8;
             transform: scale(1.05);
         }
-
-        .search-container {
-            margin: 20px 0;
-        }
-
-        input[type="text"] {
-            width: 70%;
-            /* Adjust the width as needed */
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #081174;
-            font-size: 1em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: border-color 0.3s;
-        }
-
-        input[type="text"]:focus {
-            border-color: #2193b0;
-            outline: none;
-        }
     </style>
-    <style>
-        .marquee-container {
-          width: 100%;
-          overflow: hidden;
-          white-space: nowrap;
-          background-color: #f1f1f1;
-          padding: 5px 0;
-          position: relative;
-        }
-
-        .marquee {
-          display: inline-block;
-          animation: continuous-scroll 10s linear infinite;
-          position: relative;
-        }
-
-        @keyframes continuous-scroll {
-          0% {
-            transform: translateX(100%);
-          }
-          100% {
-            transform: translateX(-100%);
-          }
-        }
-
-        .marquee a {
-          color: blue;
-          text-decoration: underline;
-          margin-left: 10px;
-        }
-      </style>
-    <script>
-        const courses = [
-            { name: 'Basic Electronics', code: 'EC1001-1', link: 'be.html' },
-            { name: 'Calculation and Differential Equations', code: 'MA1002-1', link: 'cde.html' },
-            { name: 'Constitution of India', code: 'HU1002-1', link: 'coi.html' },
-            { name: 'Cyber Security', code: 'IS1101-1', link: 'cs.html' },
-            { name: 'Quantum Computing and Modern Physics', code: 'PH1004-1', link: 'qcmp.html' },
-            { name: 'Problem Solving through Programming', code: 'CS1001-2', link: 'psp.html' },
-            { name: 'Technical English', code: 'HU1001-1', link: 'te.html' }
-        ];
-
-        function filterCourses() {
-            const searchInput = document.getElementById('searchInput').value.toLowerCase();
-            const menuList = document.getElementById('menuList');
-            menuList.innerHTML = ''; // Clear current list
-
-            const filteredCourses = courses.filter(course =>
-                course.name.toLowerCase().includes(searchInput) ||
-                course.code.toLowerCase().includes(searchInput)
-            );
-
-            filteredCourses.forEach(course => {
-                const menuItem = document.createElement('div');
-                menuItem.classList.add('menu-item');
-                menuItem.innerHTML = `
-                    <button onclick="window.location.href='${course.link}'">${course.name}</button>
-                    <button onclick="window.location.href='${course.link}'">${course.code}</button>
-                `;
-                menuList.appendChild(menuItem);
-            });
-
-            if (filteredCourses.length === 0) {
-                menuList.innerHTML = '<p>No courses found. Please try a different search.</p>';
-            }
-        }
-    </script>
 </head>
 
 <body>
@@ -245,50 +157,18 @@
                 Warning:These Notes are designed for IT Courses make sure that its Relevent for Your Course
             </p>
         </div>
-        <div class="marquee-container">
-            <div class="marquee">
-            <a href="te.html">CLICK HERE to access ENGLISH.</a>
-        </div>
-        </div>
-            <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search Course or Course Code" onkeyup="filterCourses()" />
-        </div>
-
-        <h3 class="available-pdfs">Available Courses:</h3>
         <div class="menu" id="menuList">
-            <!-- Initial hard-coded course buttons for initial view -->
             <div class="menu-item">
-                <button onclick="window.location.href='be.html'">Basic Electronics</button>
-                <button onclick="window.location.href='be.html'">EC1001-1</button>
+                <button onclick="window.location.href='sem1.html'">SEMESTER 1</button>
             </div>
             <div class="menu-item">
-                <button onclick="window.location.href='cde.html'">Calculations and Differential Equations</button>
-                <button onclick="window.location.href='cde.html'">MA1002-1</button>
+                <button onclick="window.location.href='sem2.html'">SEMESTER 2</button>
             </div>
-            <div class="menu-item">
-                <button onclick="window.location.href='coi.html'">Constitution of India</button>
-                <button onclick="window.location.href='coi.html'">HU1002-1</button>
-            </div>
-            <div class="menu-item">
-                <button onclick="window.location.href='cs.html'">Cyber Security</button>
-                <button onclick="window.location.href='cs.html'">IS1101-1</button>
-            </div>
-            <div class="menu-item">
-                <button onclick="window.location.href='qcmp.html'">Quantum Computing and Modern Physics</button>
-                <button onclick="window.location.href='qcmp.html'">PH1004-1</button>
-            </div>
-            <div class="menu-item">
-                <button onclick="window.location.href='psp.html'">Problem Solving through Programming</button>
-                <button onclick="window.location.href='psp.html'">CS1001-2</button>
-            </div>
-            <div class="menu-item">
-                <button onclick="window.location.href='te.html'">Technical English</button>
-                <button onclick="window.location.href='te.html'">HU1001-1</button>
-            </div>
+            
         </div>
     </div>
     <footer>
-        <p>Last Updated on 19th December 2024 at 12:12 pm </p>
+        <p>Last Updated on 3rd January 2024 at 00:00 am </p>
         <p>&copy; 2024 Notes For NMAMIT's by NMAMITIAN</p>
     </footer>
 </body>
