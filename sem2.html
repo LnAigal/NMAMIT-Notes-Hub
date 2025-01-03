@@ -1,1 +1,308 @@
-Yet To Be Uploaded ,STAY TUNED!!!
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="nnhicon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="TtNL9G3o7P5iHPxrK_N3kUJvanidGTUtzKgATR0jWzA" />
+    <meta name="description" content="NMAMIT Notes Hub for NMAMIT IT Students.">
+    <meta name="keywords" content="nmamit notes hub, notes,laksh">
+    <title>NMAMIT NOTES HUB</title>
+   <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff3eb;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        header {
+            background-color: #fff3db;
+            color: #ff0000;
+            text-decoration-line:#000000;
+            padding: 20px 0;
+            border-bottom: 2px solid #e43131;
+            border-radius: 8px;
+            font-family: 'Roboto', sans-serif;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 0.5s;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        h3{
+            color: #000000;  
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: left;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            justify-content: center;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .menu-item:nth-child(1) {
+            animation-delay: 0.5s;
+        }
+
+        .menu-item:nth-child(2) {
+            animation-delay: 0.55s;
+        }
+
+        .menu-item:nth-child(3) {
+            animation-delay: 0.60s;
+        }
+
+        .menu-item:nth-child(4) {
+            animation-delay: 0.65s;
+        }
+
+        .menu-item:nth-child(5) {
+            animation-delay: 0.70s;
+        }
+
+        .menu-item:nth-child(6) {
+            animation-delay: 0.75s;
+        }
+
+        .menu-item:nth-child(7) {
+            animation-delay: 0.80s;
+        }
+
+        .menu-item:nth-child(8) {
+            animation-delay: 0.85s;
+        }
+
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #000000;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 2s;
+        }
+
+        button {
+            padding: 15px;
+            width: 45%;
+            background: linear-gradient(to right, #ff6a00, #ee0979);
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: opacity 0.3s, transform 0.3s;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+
+        .search-container {
+            margin: 20px 0;
+        }
+
+        input[type="text"] {
+            width: 75%;
+            /* Adjust the width as needed */
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #081174;
+            font-size: 1em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #2193b0;
+            outline: none;
+        }
+        .back-button {
+            
+            margin-top: 20px;
+            padding: 10px 15px;
+            background: #ff0000;
+            /* Same gradient as body */
+            color: white;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            transition: opacity 0.3s, transform 0.3s;
+            /* Animation effects */
+            width: 100%;
+            /* Set width to 100% */
+            max-width: 200px;
+            /* Max-width for the back button */
+            margin-left: auto;
+            /* Center align */
+            margin-right: auto;
+            /* Center align */
+            font-size: 0.9em;
+            /* Slightly smaller font size for back button */
+        }
+
+        .back-button:hover {
+            opacity: 0.8;
+            /* Slightly transparent on hover */
+            transform: scale(1.05);
+            /* Slightly enlarge on hover */
+        }
+
+    </style>
+    <style>
+        .marquee-container {
+          width: 100%;
+          overflow: hidden;
+          white-space: nowrap;
+          background-color: #f1f1f1;
+          padding: 5px 0;
+          position: relative;
+        }
+
+        .marquee {
+          display: inline-block;
+          animation: continuous-scroll 10s linear infinite;
+          position: relative;
+        }
+
+        @keyframes continuous-scroll {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+
+        .marquee a {
+          color: blue;
+          text-decoration: underline;
+          margin-left: 10px;
+        }
+      </style>
+    <script>
+        const courses = [
+            { name: 'Applied Digital Logic Design', code: 'EC1002-2', link: 'ec.html' },
+            { name: 'Basic Electrical Engineering', code: 'EE1001-2', link: 'ee.html' },
+            { name: 'Biology for Engineers', code: 'BT1651-1', link: 'bt.html' },
+            { name: 'Discrete Mathematics and Transform Techniques', code: 'MA1007-1', link: 'mat.html' },
+            { name: 'Engineering Visualization', code: 'ME1004-1', link: 'me.html' },
+            { name: 'Environmental Studies and Sustainability', code: 'CV1005-1', link: 'cv.html' },
+            { name: 'Introduction to Python Programming', code: 'CS1005-2', link: 'py.html' },
+            { name: 'Materials Chemistry for Computer Systems', code: 'CY1003-1', link: 'cy.html' }
+        ];
+
+        function filterCourses() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const menuList = document.getElementById('menuList');
+            menuList.innerHTML = ''; // Clear current list
+
+            const filteredCourses = courses.filter(course =>
+                course.name.toLowerCase().includes(searchInput) ||
+                course.code.toLowerCase().includes(searchInput)
+            );
+
+            filteredCourses.forEach(course => {
+                const menuItem = document.createElement('div');
+                menuItem.classList.add('menu-item');
+                menuItem.innerHTML = `
+                    <button onclick="window.location.href='${course.link}'">${course.name}</button>
+                    <button onclick="window.location.href='${course.link}'">${course.code}</button>
+                `;
+                menuList.appendChild(menuItem);
+            });
+
+            if (filteredCourses.length === 0) {
+                menuList.innerHTML = '<p>No courses found. Please try a different search.</p>';
+            }
+        }
+        function goBack() {
+            window.location.href = 'index.html'; 
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>SEMESTER 2</h1>
+      <h1>Yet To Be Uploaded ,STAY TUNED!!!</h1>
+    </header>
+        </div>
+            <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search Course or Course Code" onkeyup="filterCourses()" />
+        </div>
+
+        <h3 class="available-pdfs">Available Courses:</h3>
+        <div class="menu" id="menuList">
+            <div class="menu-item">
+                <button onclick="window.location.href='ec.html'">Applied Digital Logic Design</button>
+                <button onclick="window.location.href='ec.html'">EC1002-2</button>
+            </div>
+            <div class="menu-item">
+                <button onclick="window.location.href='ee.html'">Basic Electrical Engineering</button>
+                <button onclick="window.location.href='ee.html'">EE1001-2</button>
+            </div>
+            <div class="menu-item">
+                <button onclick="window.location.href='bt.html'">Biology for Engineers</button>
+                <button onclick="window.location.href='bt.html'">BT1651-1</button>
+            </div>
+            <div class="menu-item">
+                <button onclick="window.location.href='mat.html'">Discrete Mathematics and Transform Techniques</button>
+                <button onclick="window.location.href='mat.html'">MA1007-1</button>
+            </div>
+            <div class="menu-item">
+                <button onclick="window.location.href='me.html'">Engineering Visualization</button>
+                <button onclick="window.location.href='me.html'">ME1004-1</button>
+            </div>
+            <div class="menu-item">
+                <button onclick="window.location.href='cv.html'">Environmental Studies and Sustainability</button>
+                <button onclick="window.location.href='cv.html'">CV1005-1</button>
+            </div>
+            <div class="menu-item">
+                <button onclick="window.location.href='py.html'">Introduction to Python Programming</button>
+                <button onclick="window.location.href='py.html'">CS1005-2</button>
+            </div>
+            <div class="menu-item">
+                <button onclick="window.location.href='cy.html'">Materials Chemistry for Computer Systems</button>
+                <button onclick="window.location.href='cy.html'">CY1003-1</button>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <button class="back-button" onclick="goBack()">BACK</button>
+        <p>&copy; 2024 Notes For NMAMIT's by NMAMITIAN</p>
+    </footer>
+</body>
+
+</html>
