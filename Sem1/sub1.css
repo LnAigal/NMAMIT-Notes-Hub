@@ -7,8 +7,10 @@
           /* Center the image */
           margin: 0;
           padding: 20px;
+          padding-top: 15%;
           text-align: center;
           color: #fff;
+
           /* White text for contrast */
       }
 
@@ -19,6 +21,7 @@
           padding: 20px 0;
           border-bottom: 2px solid #e43131;
           border-radius: 8px;
+          position: relative;
           font-family: 'Roboto', sans-serif;
       }
 
@@ -58,7 +61,7 @@
           text-align: center;
           transition: transform 0.3s, opacity 0.3s;
           /* Animation effects */
-          width: 100%;
+          width: 90%;
           /* Set width to 100% */
           max-width: 500px;
           /* Increased max-width for PDF buttons */
@@ -133,6 +136,10 @@
           /* Changed to white */
       }
 
+      .available-pdfs a {
+          max-width: 90%;
+      }
+
       .explore-text {
           font-size: 1em;
           /* Adjust font size if needed */
@@ -142,24 +149,64 @@
           /* Changed to white */
       }
 
+      /* Ensure the navbar and parent div are set up correctly for stickiness */
+      nav {
+          position: relative;
+          /* Ensures the parent container can work with sticky positioning */
+      }
+
+      nav div {
+          background: linear-gradient(to right, #ff6a00, #ee0979);
+          /* Gradient background */
+          border-radius: 8px;
+          /* Rounded corners */
+          position: fixed;
+          /* Makes it sticky */
+          top: 0;
+          max-width: 90%;
+          margin-bottom: 100px;
+          /* Sticks it to the top of the screen */
+          z-index: 1000;
+          /* Keeps navbar above other elements */
+          width: 100%;
+      }
+
       .navbar {
+        max-width: 90%;
           list-style: none;
           /* Removes bullets */
           display: flex;
-          /* Makes items inline */
+          /* Makes the items inline */
           padding: 15px;
           margin: 0;
+          top:auto;
+          /* Ensures it sticks at the top of the container */
+          position: sticky;
+          /* Sticky position for the navbar */
+          z-index: 9999;
+          /* Keeps navbar above other content */
       }
 
-       nav div{
-        background: linear-gradient(to right, #ff6a00, #ee0979);
-          
-      }
       .navbar li {
           margin: 0 10px;
+          /* Space between list items */
       }
 
       .navbar a {
           text-decoration: none;
+          /* Removes underline */
           color: white;
+          /* White text color */
+          padding: 10px;
+          max-width: 90%;
+          /* Adds space for clickable area */
+          border-radius: 5px;
+          /* Rounded link edges */
+          transition: background-color 0.3s ease;
+          /* Smooth background transition */
+      }
+
+      .navbar a:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+          /* Adds a hover effect */
       }
