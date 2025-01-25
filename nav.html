@@ -5,6 +5,68 @@
             <li><a href="updates.html"><i class="fas fa-sync-alt"></i> Updates</a></li>
             <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
             <li><a href="qna.html"><i class="fas fa-envelope"></i> Q&A</a></li>
-            <li><a href="contribute.html"><i class="fas fa-donate"></i> Contribute</a></li>
+            <li><a href="contribute.html"><i class="fas fa-donate"></i>Contribute</a></li>
         </ul>
 </nav>
+<style>
+    nav {
+          position: relative;
+          /* Ensures the parent container can work with sticky positioning */
+      }
+
+      nav div {
+          background: linear-gradient(to right, #ff6a00, #ee0979);
+          /* Gradient background */
+          border-radius: 8px;
+          /* Rounded corners */
+          position: fixed;
+          /* Makes it sticky */
+          top: 0;
+          max-width: 90%;
+          margin-bottom: 100px;
+          /* Sticks it to the top of the screen */
+          z-index: 1000;
+          /* Keeps navbar above other elements */
+          width: 100%;
+      }
+
+      .navbar {
+        max-width: 100%;
+          list-style: none;
+          /* Removes bullets */
+          display: flex;
+          /* Makes the items inline */
+          padding: 5px;
+          margin: 0;
+          top:auto;
+          /* Ensures it sticks at the top of the container */
+          position: sticky;
+          /* Sticky position for the navbar */
+          z-index: 9999;
+          /* Keeps navbar above other content */
+      }
+
+      .navbar li {
+          margin: 0 1px;
+          /* Space between list items */
+      }
+
+      .navbar a {
+          text-decoration: none;
+          /* Removes underline */
+          color: white;
+          /* White text color */
+          padding: 15px;
+          max-width: 90%;
+          /* Adds space for clickable area */
+          border-radius: 5px;
+          /* Rounded link edges */
+          transition: background-color 0.3s ease;
+          /* Smooth background transition */
+      }
+
+      .navbar a:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+          /* Adds a hover effect */
+      }
+</style>

@@ -172,12 +172,12 @@
       }
 
       .navbar {
-        max-width: 90%;
+        max-width: 100%;
           list-style: none;
           /* Removes bullets */
           display: flex;
           /* Makes the items inline */
-          padding: 15px;
+          padding: 5px;
           margin: 0;
           top:auto;
           /* Ensures it sticks at the top of the container */
@@ -188,7 +188,7 @@
       }
 
       .navbar li {
-          margin: 0 10px;
+          margin: 0 1px;
           /* Space between list items */
       }
 
