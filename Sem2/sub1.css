@@ -1,0 +1,212 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff3eb;
+    background-size: cover;
+    /* Cover the entire area */
+    background-position: center;
+    /* Center the image */
+    margin: 0;
+    padding: 20px;
+    padding-top: 15%;
+    text-align: center;
+    color: #fff;
+
+    /* White text for contrast */
+}
+
+header {
+    background-color: #fff3db;
+    color: #ff0000;
+    text-decoration-line: #000000;
+    padding: 20px 0;
+    border-bottom: 2px solid #e43131;
+    border-radius: 8px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    background: transparent;
+    /* Remove background */
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #000000;
+}
+
+.pdf-link {
+    display: block;
+    margin: 15px 0;
+    padding: 15px;
+    /* Increased padding for larger buttons */
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    /* Gradient for links */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s, opacity 0.3s;
+    /* Animation effects */
+    width: 90%;
+    /* Set width to 100% */
+    max-width: 500px;
+    /* Increased max-width for PDF buttons */
+    margin-left: auto;
+    /* Center align */
+    margin-right: auto;
+    /* Center align */
+    font-size: 1.2em;
+    /* Increased font size for buttons */
+}
+
+.pdf-link:hover {
+    opacity: 0.8;
+    /* Slightly transparent on hover */
+    transform: scale(1.05);
+    /* Slightly enlarge on hover */
+}
+
+.search-section {
+    margin-bottom: 20px;
+}
+
+.search-input {
+    padding: 10px;
+    /* Decreased padding for smaller input */
+    width: 80%;
+    /* Adjust width as needed */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    /* Adjusted font size for search input */
+}
+
+.back-button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    /* Same gradient as body */
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: opacity 0.3s, transform 0.3s;
+    /* Animation effects */
+    width: 100%;
+    /* Set width to 100% */
+    max-width: 200px;
+    /* Max-width for the back button */
+    margin-left: auto;
+    /* Center align */
+    margin-right: auto;
+    /* Center align */
+    font-size: 0.9em;
+    /* Slightly smaller font size for back button */
+}
+
+
+.back-button:hover {
+    opacity: 0.8;
+    /* Slightly transparent on hover */
+    transform: scale(1.05);
+    /* Slightly enlarge on hover */
+}
+
+.available-pdfs {
+    font-size: 1.5em;
+    /* Adjust font size if needed */
+    margin: 20px 0;
+    /* Add some margin */
+    color: rgb(0, 0, 0);
+    /* Changed to white */
+}
+
+.available-pdfs a {
+    max-width: 90%;
+}
+
+.explore-text {
+    font-size: 1em;
+    /* Adjust font size if needed */
+    margin-top: 10px;
+    /* Add some margin */
+    color: rgb(0, 0, 0);
+    /* Changed to white */
+}
+
+/* Ensure the navbar and parent div are set up correctly for stickiness */
+nav {
+    position: relative;
+    /* Ensures the parent container can work with sticky positioning */
+}
+
+nav div {
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    /* Gradient background */
+    border-radius: 8px;
+    /* Rounded corners */
+    position: fixed;
+    /* Makes it sticky */
+    top: 0;
+    max-width: 90%;
+    margin-bottom: 100px;
+    /* Sticks it to the top of the screen */
+    z-index: 1000;
+    /* Keeps navbar above other elements */
+    width: 100%;
+}
+
+.navbar {
+  max-width: 100%;
+    list-style: none;
+    /* Removes bullets */
+    display: flex;
+    /* Makes the items inline */
+    padding: 5px;
+    margin: 0;
+    top:auto;
+    /* Ensures it sticks at the top of the container */
+    position: sticky;
+    /* Sticky position for the navbar */
+    z-index: 9999;
+    /* Keeps navbar above other content */
+}
+
+.navbar li {
+    margin: 0 1px;
+    /* Space between list items */
+}
+
+.navbar a {
+    text-decoration: none;
+    /* Removes underline */
+    color: white;
+    /* White text color */
+    padding: 10px;
+    max-width: 90%;
+    /* Adds space for clickable area */
+    border-radius: 5px;
+    /* Rounded link edges */
+    transition: background-color 0.3s ease;
+    /* Smooth background transition */
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Adds a hover effect */
+}
