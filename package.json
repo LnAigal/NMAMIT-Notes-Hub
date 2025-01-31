@@ -1,8 +1,0 @@
-{
-    "dependencies": {
-        "express": "^4.17.1",
-        "mongoose": "^6.0.0",       // For MongoDB interactions
-        "bcrypt": "^5.0.0",         // For password hashing
-        "jsonwebtoken": "^8.5.1"    // For creating JWTs
-    }
-}

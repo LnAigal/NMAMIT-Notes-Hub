@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: /private/
-Sitemap: https://lnaigal.github.io/NMAMIT-Notes-Hub/sitemap.xml
