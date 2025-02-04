@@ -188,7 +188,7 @@
       }
 
       .navbar li {
-          margin: 0 1px;
+          margin: 0 1%;
           /* Space between list items */
       }
 
@@ -197,7 +197,7 @@
           /* Removes underline */
           color: white;
           /* White text color */
-          padding: 10px;
+          padding: 5%;
           max-width: 90%;
           /* Adds space for clickable area */
           border-radius: 5px;

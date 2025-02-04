@@ -38,8 +38,6 @@
         <a href="https://drive.google.com/file/d/1jjPZcqdcRTMJTO57wL-htXoM3pks0DcN/view?usp=drivesdk" class="pdf-link" data-keywords="UNIT-1">UNIT-1</a>
         <p class="explore-text">Feel free to explore these resources for a deeper understanding of Biology.
         </p>
-
-        <button class="back-button" onclick="goBack()">BACK</button>
     </div>
     <footer>
         <p>&copy; 2024 Notes For NMAMIT's by NMAMITIAN</p>
@@ -53,10 +51,6 @@
                 const keywords = link.getAttribute('data-keywords') ? link.getAttribute('data-keywords').toLowerCase() : '';
                 link.style.display = keywords.includes(input) ? 'block' : 'none';
             });
-        }
-
-        function goBack() {
-            window.location.href = '../sem2.html'; // Adjust this path based on your actual folder structure
         }
     </script>
 </body>

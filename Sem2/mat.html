@@ -37,8 +37,6 @@
         <a href="https://drive.google.com/file/d/1jjaF-bFNsSDOoiFMSUMPdzpdrWWuqWr2/view" class="pdf-link" data-keywords="UNIT-1 MCQ">UNIT-1 MCQ</a>
         <p class="explore-text">Feel free to explore these resources for a deeper understanding of DISCRETE MATHEMATICS AND TRANSFORM TECHNIQUES.
         </p>
-
-        <button class="back-button" onclick="goBack()">BACK</button>
     </div>
     <footer>
         <p>&copy; 2024 Notes For NMAMIT's by NMAMITIAN</p>
@@ -52,10 +50,6 @@
                 const keywords = link.getAttribute('data-keywords') ? link.getAttribute('data-keywords').toLowerCase() : '';
                 link.style.display = keywords.includes(input) ? 'block' : 'none';
             });
-        }
-
-        function goBack() {
-            window.location.href = '../sem2.html'; // Adjust this path based on your actual folder structure
         }
     </script>
 </body>
