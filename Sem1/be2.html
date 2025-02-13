@@ -42,8 +42,6 @@
 
         <p class="explore-text">Feel free to explore these resources for a deeper understanding of Basic Electronics.
         </p>
-
-        <button class="back-button" onclick="goBack()">BACK</button>
     </div>
     <footer>
         <p>&copy; 2024 Notes For NMAMIT's by NMAMITIAN</p>
@@ -57,10 +55,6 @@
                 const keywords = link.getAttribute('data-keywords') ? link.getAttribute('data-keywords').toLowerCase() : '';
                 link.style.display = keywords.includes(input) ? 'block' : 'none';
             });
-        }
-
-        function goBack() {
-            window.location.href = 'be.html'; 
         }
     </script>
 </body>

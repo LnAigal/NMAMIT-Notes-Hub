@@ -53,8 +53,6 @@
         <a href="https://drive.google.com/file/d/1d8tuebf-TY-f0po_TuqktL16n3hdkUCy/view?usp=sharing" class="pdf-link"
             data-keywords="Unit-3 Question Bank answers">UNIT-3 QUESTION BANK ANSWERS</a>
         <p class="explore-text">Explore these resources for a deeper understanding of Cyber Security.</p>
-
-        <button class="back-button" onclick="goBack()">BACK</button>
     </div>
     <footer>
         <p>&copy; 2024 Notes For NMAMIT's by NMAMITIAN</p>
@@ -68,10 +66,6 @@
                 const keywords = link.getAttribute('data-keywords') ? link.getAttribute('data-keywords').toLowerCase() : '';
                 link.style.display = keywords.includes(input) ? 'block' : 'none';
             });
-        }
-
-        function goBack() {
-            window.location.href = 'cs.html'; // Navigate back to cs.html
         }
     </script>
 </body>

@@ -37,8 +37,6 @@
             data-keywords="MCQ">MCQ</a>
         <p class="explore-text">Explore these resources for a deeper understanding of Problem Solving through
             Programming.</p>
-
-        <button class="back-button" onclick="goBack()">BACK</button>
     </div>
     <footer>
         <p>&copy; 2024 Notes For NMAMIT's by NMAMITIAN</p>
@@ -52,10 +50,6 @@
                 const keywords = link.getAttribute('data-keywords') ? link.getAttribute('data-keywords').toLowerCase() : '';
                 link.style.display = keywords.includes(input) ? 'block' : 'none';
             });
-        }
-
-        function goBack() {
-            window.location.href = 'psp.html'; // Navigate back to psp.html
         }
     </script>
 </body>
