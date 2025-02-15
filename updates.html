@@ -24,31 +24,15 @@
 
         }
     </style>
-    <div id="ga-header"></div>
-    <script>
-        fetch('ga-header.html')
-          .then(response => response.text())
-          .then(data => {
-            let tempDiv = document.createElement("div");
-            tempDiv.innerHTML = data;
-      
-            // Append the content inside <head>
-            document.head.appendChild(tempDiv);
-      
-            // Execute scripts inside ga-header.html
-            let scripts = tempDiv.getElementsByTagName("script");
-            for (let script of scripts) {
-              let newScript = document.createElement("script");
-              if (script.src) {
-                newScript.src = script.src;
-                newScript.async = true;
-              } else {
-                newScript.textContent = script.innerHTML;
-              }
-              document.head.appendChild(newScript);
-            }
-          });
-      </script>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ7R2JQ63Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-RQ7R2JQ63Q'); // Replace with your GA4 Measurement ID
+</script>
+
       
 </head>
 
