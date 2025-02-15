@@ -8,12 +8,15 @@
     <title>FUNDAMENTALS OF COMMUNICATION AND EMBEDDED SYSTEMS</title>
     <link rel="stylesheet" href="sub1.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <div id="ga-header"></div>
     <script>
-      fetch('ga-header.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('ga-header').innerHTML = data);
-    </script>
+        fetch('../ga-header.html')
+          .then(response => response.text())
+          .then(data => {
+            let scriptElement = document.createElement("script");
+            scriptElement.innerHTML = data;
+            document.head.appendChild(scriptElement);
+            });
+      </script>
 </head>
 
 <body>
