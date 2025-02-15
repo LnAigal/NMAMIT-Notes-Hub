@@ -280,12 +280,31 @@
             window.location.href = 'index.html';
         }
     </script>
-    <div id="ga-header"></div>
-    <script>
-      fetch('ga-header.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('ga-header').innerHTML = data);
-    </script>
+   <script>
+    fetch('ga-header.html')
+      .then(response => response.text())
+      .then(data => {
+        let tempDiv = document.createElement("div");
+        tempDiv.innerHTML = data;
+  
+        // Append the content inside <head>
+        document.head.appendChild(tempDiv);
+  
+        // Execute scripts inside ga-header.html
+        let scripts = tempDiv.getElementsByTagName("script");
+        for (let script of scripts) {
+          let newScript = document.createElement("script");
+          if (script.src) {
+            newScript.src = script.src;
+            newScript.async = true;
+          } else {
+            newScript.textContent = script.innerHTML;
+          }
+          document.head.appendChild(newScript);
+        }
+      });
+  </script>
+  
 </head>
 
 <body>
