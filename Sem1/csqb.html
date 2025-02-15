@@ -7,27 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MCQ And Question Bank</title>
      <link rel="stylesheet" href="sub1.css"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-     <script>
-        fetch('../ga-header.html')
-          .then(response => response.text())
-          .then(data => {
-            let tempDiv = document.createElement("div");
-            tempDiv.innerHTML = data;
-            let scripts = tempDiv.getElementsByTagName("script");
-      
-            for (let script of scripts) {
-              let newScript = document.createElement("script");
-              if (script.src) {
-                newScript.src = script.src;
-                newScript.async = true;
-              } else {
-                newScript.textContent = script.innerHTML;
-              }
-              document.head.appendChild(newScript);
-            }
-          });
-      </script>
-      
+  <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ7R2JQ63Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-RQ7R2JQ63Q'); // Replace with your GA4 Measurement ID
+</script>
+
 </head>
 
 <body>
