@@ -149,19 +149,12 @@
       }
     </style>
    <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ7R2JQ63Q"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-
-  gtag("config", "G-RQ7R2JQ63Q");
-</script>
-
-</script>
-
+   <div id="ga-header"></div>
+   <script>
+     fetch('ga-header.html')
+       .then(response => response.text())
+       .then(data => document.getElementById('ga-header').innerHTML = data);
+   </script>
   </head>
 
   <body>

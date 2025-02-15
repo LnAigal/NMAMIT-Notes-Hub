@@ -8,6 +8,12 @@
             <li><a href="contribute.html"><i class="fas fa-donate"></i>Contribute</a></li>
         </ul>
 </nav>
+<div id="ga-header"></div>
+    <script>
+      fetch('ga-header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('ga-header').innerHTML = data);
+    </script>
 <style>
     nav {
           position: relative;

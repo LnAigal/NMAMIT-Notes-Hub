@@ -22,6 +22,12 @@
             color: black;
         }
     </style>
+    <div id="ga-header"></div>
+    <script>
+      fetch('ga-header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('ga-header').innerHTML = data);
+    </script>
 </head>
 
 <body>
