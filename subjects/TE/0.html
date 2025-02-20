@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../../nav/nnhicon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical English</title>
+    <link rel="stylesheet" href="../../nav/sub1.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+   <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ7R2JQ63Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-RQ7R2JQ63Q'); // Replace with your GA4 Measurement ID
+</script>
+
+      
+</head>
+
+<body>
+    <header>
+        <h1>TECHNICAL ENGLISH</h1>
+    </header>
+    <div>
+        <nav>
+            <div>
+                <ul class="navbar">
+                    <li><a href="../../index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="../../nav/updates.html"><i class="fas fa-sync-alt"></i> Updates</a></li>
+                    <li><a href="../../nav/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="../../nav/qna.html"><i class="fas fa-question-circle"></i> Q&A</a></li>
+                    <li><a href="../../nav/contribute.html"><i class="fas fa-donate"></i> Contribute</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="search-section">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search..." oninput="filterLinks()">
+        </div>
+
+        <h3 class="available-pdfs">Available PDFs:</h3>
+        <a href="https://drive.google.com/file/d/1DBfEK4d2H67WqJdlfbX1ElqXB9AbPCEs/view?usp=sharing" class="pdf-link"
+            data-keywords="syllabus">SYLLABUS</a>
+        <button class="pdf-link"
+            onclick="window.location.href='https://drive.google.com/file/d/1pcIsX9rsK2RTi1Wv-2h0vuOKi30Ac9_D/view?usp=sharing'"
+            data-keywords="SEE QUESTION PAPER PATERN">SEE QUESTION PAPER PATERN</button>
+
+        <button class="pdf-link"
+            onclick="window.location.href='https://drive.google.com/file/d/1vHz8vbn3cT1VJiZ2_6aEE6FEKU0uFoun/view?usp=sharing'"
+            data-keywords="Unit-1 MCQ Sample">UNIT-1 MCQ SAMPLE</button>
+
+        <button class="pdf-link"
+            onclick="window.location.href='https://drive.google.com/file/d/1aSKr7kTXNWJGdyrqRGRmKgKWptRTYf61/view?usp=sharing'"
+            data-keywords="Appeal To The Nation">APPEAL TO THE NATION</button>
+        <button class="pdf-link"
+            onclick="window.location.href='https://drive.google.com/file/d/17PferA24CFmB_nDHQJpeDVVKA-NkWT9y/view?usp=sharing'"
+            data-keywords="Question Bank of All Units">QUESTION BANK OF ALL THE UNITS</button>
+        <button class="pdf-link"
+            onclick="window.location.href='https://drive.google.com/file/d/1Idwgw_U9vUEmhw0X4Zo2A1MeNYuCSczw/view?usp=sharing'"
+            data-keywords="Headache">HEADACHE</button>
+        <button class="pdf-link"
+            onclick="window.location.href='https://drive.google.com/file/d/1qy_BARPPhvdLdEozoNUZgohTLcb6RUY7/view?usp=sharing'"
+            data-keywords="Telephone Conversation">TELEPHONE CONVERSATION</button>
+        <button class="pdf-link"
+            onclick="window.location.href=' https://drive.google.com/file/d/1s4_ZswPZld-I44VgLmdHxh8VeBybzpBr/view?usp=sharing'"
+            data-keywords="Coramandel fishers">CORAMANDEL FISHERS</button>
+        <button class="pdf-link"
+            onclick="window.location.href=' https://drive.google.com/file/d/1pOfj7ds0fQTxm8o9AFfCml1MeXUaZKGN/view?usp=sharing'"
+            data-keywords="MSE 1 SEPTEMBER 2024">MSE 1 SEPTEMBER 2024</button>
+        <button class="pdf-link"
+            onclick="window.location.href=' https://drive.google.com/file/d/1pOjhB9iWTIRVPgEnC-TFV-ygHQw4a5Bi/view?usp=sharing'"
+            data-keywords="MSE 2 OCTOBER 2024">MSE 2 OCTOBER 2024</button>
+        <button class="pdf-link"
+            onclick="window.location.href=' https://drive.google.com/file/d/1pPRYBn049QB-sQdUSo36NerJJ0G--FEB/view?usp=sharing'"
+            data-keywords="SEM DECEMBER 2024">SEM DECEMBER 2024</button>
+
+
+        <p class="explore-text">Feel free to explore these resources for a deeper understanding of Technical English.
+        </p>
+    </div>
+    <footer>
+        <p>&copy; 2024 Notes For NMAMIT's by NMAMITIAN</p>
+    </footer>
+
+    <script>
+        function filterLinks() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const links = document.querySelectorAll('.pdf-link');
+            links.forEach(link => {
+                const keywords = link.getAttribute('data-keywords') ? link.getAttribute('data-keywords').toLowerCase() : '';
+                link.style.display = keywords.includes(input) ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+
+</html>

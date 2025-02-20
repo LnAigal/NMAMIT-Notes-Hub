@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../../nav/nnhicon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHEMISTRY</title>
+    <link rel="stylesheet" href="../../nav/sub1.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ7R2JQ63Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-RQ7R2JQ63Q'); // Replace with your GA4 Measurement ID
+</script>
+
+</head>
+
+<body>
+    <header>
+        <h1>CHEMISTRY</h1>
+    </header>
+    <div>
+        <nav>
+            <div>
+                <ul class="navbar">
+                    <li><a href="../../index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="../../nav/updates.html"><i class="fas fa-sync-alt"></i> Updates</a></li>
+                    <li><a href="../../nav/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="../../nav/qna.html"><i class="fas fa-question-circle"></i> Q&A</a></li>
+                    <li><a href="../../nav/contribute.html"><i class="fas fa-donate"></i> Contribute</a></li>
+                </ul>
+        </nav>
+    </div>
+    </div>
+    <div class="content">
+        <div class="search-section">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search the Topic"
+                oninput="filterLinks()">
+        </div>
+
+        <h3 class="available-pdfs">Available PDFs:</h3>
+        <a href="https://drive.google.com/file/d/1jfR-auFec9KIV98exAKiLdEH7DKm_6ky/view?usp=drivesdk" class="pdf-link" data-keywords="syllabus">SYLLABUS</a>
+        <a href="https://drive.google.com/file/d/1jjPZcqdcRTMJTO57wL-htXoM3pks0DcN/view?usp=drivesdk" class="pdf-link" data-keywords="UNIT-1">UNIT-1</a>
+        <a href="https://drive.google.com/file/d/17Care2l1ZBCU6tBsrHVrrrpCPHFBCW9W/view?usp=sharing" class="pdf-link" data-keywords="UNIT-1 MCQ">UNIT-1 MCQ</a>
+        <a href="https://drive.google.com/file/d/1M-wKgwoLEV1kQOWTHIEsW36tWsnfLQIl/view?usp=drivesdk" class="pdf-link" data-keywords="UNIT-1 HAND WRITTEN NOTES">UNIT-1 HAND WRITTEN NOTES(warning:only last page is INCOMPLETE,SORRY for inconvenience)</a>
+        <a href="https://drive.google.com/file/d/1BUdM6GUaUk4TW3GxhFHkNtgpWDjafYny/view?usp=sharing" class="pdf-link" data-keywords="PREVIOUS YEAR QUESTION PAPERS">PREVIOUS YEAR QUESTION PAPERS</a>
+        <p class="explore-text">Feel free to explore these resources for a deeper understanding of Chemistry.
+        </p>
+    </div>
+    <footer>
+        <p>&copy; 2024 Notes For NMAMIT's by NMAMITIAN</p>
+    </footer>
+
+    <script>
+        function filterLinks() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const links = document.querySelectorAll('.pdf-link');
+            links.forEach(link => {
+                const keywords = link.getAttribute('data-keywords') ? link.getAttribute('data-keywords').toLowerCase() : '';
+                link.style.display = keywords.includes(input) ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+
+</html>
