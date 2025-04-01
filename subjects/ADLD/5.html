@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../../nav/nnhicon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOUTUBE VIDEO</title>
+    <link rel="stylesheet" href="../../nav/sub1.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ7R2JQ63Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-RQ7R2JQ63Q');
+    </script>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <style>
+        h2 {
+            color: black;
+        }
+        .video-container {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>These are videos related to MSE 2</h1>
+    </header>
+    <div>
+        <nav>
+            <div>
+                <ul class="navbar">
+                    <li><a href="../../index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="../../nav/updates.html"><i class="fas fa-sync-alt"></i> Updates</a></li>
+                    <li><a href="../../nav/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="../../nav/qna.html"><i class="fas fa-question-circle"></i> Q&A</a></li>
+                    <li><a href="../../nav/contribute.html"><i class="fas fa-donate"></i> Contribute</a></li>
+                </ul>
+        </nav>
+    </div>
+    </div>
+
+    <div class="video-container">
+        <h2>HALF ADDER</h2>
+        <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/zm71wFsj-fs?enablejsapi=1&start=35" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="video-container">
+        <h2>FULL ADDER</h2>
+        <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/wysI90Xtxvc?enablejsapi=1&start=32" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="video-container">
+        <h2>4 BIT PARALLEL ADDER / RIPPLE ADDER</h2>
+        <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/8eJe9Sv8s70?enablejsapi=1&start=58"
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="video-container">
+        <h2>HALF SUBTRACTOR</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/7WoTCwgx0kE?si=YyQdJm5-oRvltrKw&amp;start=28"
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+
+    <div class="video-container">
+        <h2>FULL SUBTRACTOR</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wqbpR_GVwfA?si=OlKsogN8rO3MgwmV&amp;start=13" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    
+    <script>
+        let players = [];
+
+        function onYouTubeIframeAPIReady() {
+            document.querySelectorAll('.youtube-video').forEach((iframe, index) => {
+                players[index] = new YT.Player(iframe, {
+                    events: {
+                        "onStateChange": function (event) {
+                            if (event.data === YT.PlayerState.PLAYING) {
+                                pauseOtherVideos(index);
+                            }
+                        }
+                    }
+                });
+            });
+        }
+
+        function pauseOtherVideos(currentIndex) {
+            players.forEach((player, index) => {
+                if (index !== currentIndex && player.pauseVideo) {
+                    player.pauseVideo();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
