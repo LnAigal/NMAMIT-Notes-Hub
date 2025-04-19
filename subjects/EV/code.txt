@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EV Videos</title>
+  <style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #fff3eb;
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 20px;
+        margin-top: 30px;
+        padding-top: 20px;
+        text-align: center;
+        color: #fff;
+    }
+
+    header {
+        background-color: #fff3db;
+        color: #ff0000;
+        padding: 20px 0;
+        border-bottom: 2px solid #e43131;
+        border-radius: 8px;
+        position: relative;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+    .video-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .video-box {
+        width: 640px;
+        height: 360px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        overflow: hidden;
+        background: #000;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    p {
+        color: black;
+    }
+    h3{
+        color: #000;
+    }
+    footer {
+        margin-top: 40px;
+        font-size: 0.9em;
+        color: #000000;
+    }
+
+    .page-title {
+        font-size: 1.2em;
+        color: #000;
+        margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>EV VIDEOS</h1>
+  </header>
+<H3>WARNING:This page contains only 2 videos of Isometric Projection and it contains all the Development of Lateral surfaces</H3>
+  <p>
+    1. A hexagonal prism of base side 25mm and height 50mm is 
+    resting on HP on its base such that two of the base edges are 
+    parallel to VP. The prism is cut in this position as shown in 
+    the following front view. Draw the development of the lateral 
+    surface of the prism.
+  </p>
+
+  <div class="video-container">
+    <div class="video-box">
+      <iframe src="https://drive.google.com/file/d/1k6I0xmFpkcHcph6mGkPElp7OLTxz6kAO/preview" allow="autoplay"></iframe>
+    </div>
+    <p>2. A vertical cylinder of base diameter 50mm and axis 
+        60mm'is cut by two planes which are perpendicular to VP 
+        and inclined at 45° to HP. and passing through either side of 
+        the center point of the top face. Draw the development of 
+        the lateral surface of the cylinder.</p>
+        <div class="video-box">
+            <iframe src="https://drive.google.com/file/d/14hqR8El2Vy9IZvipzNeS45mXw_EXSDTr/view?usp=sharing" allow="autoplay"></iframe>
+    </div>
+    <p>3.A square pyramid base 40mm side and axis 65mm long 
+has its base on HP and all the edges of the base are equally 
+inclined to VP. It is cut with an inclined section plane at 45º 
+to its axis and bisecting it. Draw the development of the 
+truncated pyramid</p>
+    <div class="video-box">
+      <iframe src="https://drive.google.com/file/d/1_7-MbXSGPeOUP3qCyl4Ha5ypO5a_Leg3/preview" allow="autoplay"></iframe>
+    </div>
+  </div>
+    <p>4.Draw the development of the lateral surface of cone, whose 
+front view is shown below</p>
+  
+
+  <footer>
+    &copy; 2024 Notes For NMAMIT's by NMAMITIAN
+  </footer>
+
+</body>
+</html>
