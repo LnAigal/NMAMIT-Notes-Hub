@@ -4,123 +4,104 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="nav/nnhicon.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="google-site-verification"
-      content="TtNL9G3o7P5iHPxrK_N3kUJvanidGTUtzKgATR0jWzA"
-    />
-    <meta
-      name="description"
-      content="NMAMIT Notes Hub for NMAMIT IT Students."
-    />
-    <meta
-      name="keywords"
-      content="nmamit notes hub, nmamit laksh,notes hub by laksh"
-    />
+    <meta name="google-site-verification" content="TtNL9G3o7P5iHPxrK_N3kUJvanidGTUtzKgATR0jWzA" />
+    <meta name="description" content="NMAMIT Notes Hub for NMAMIT IT Students." />
+    <meta name="keywords" content="nmamit notes hub, nmamit laksh,notes hub by laksh" />
     <title>NMAMIT NOTES HUB</title>
     <style>
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+      /* Popup & Overlay */
+      #overlay {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+        z-index: 999;
       }
 
-      @keyframes colorChange {
-        0% {
-          background-color: #081174;
-        }
+      #popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        color: black;
+        transform: translate(-50%, -50%) scale(0.8);
+        background: #fff;
+        padding: 30px;
+        width: 400px;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+        z-index: 1000;
+        animation: popInOut 1.5s infinite;
+      }
 
-        50% {
-          background-color: #0a248a;
-        }
+      #overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
 
-        100% {
-          background-color: #081174;
-        }
+      #popup.active {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .popup-button {
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #00509d;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .popup-button:hover {
+        background-color: #003f7f;
       }
 
       @keyframes popInOut {
-        0% {
-          transform: scale(1);
+        0%, 100% {
+          transform: translate(-50%, -50%) scale(1);
         }
-
         50% {
-          transform: scale(1.1);
+          transform: translate(-50%, -50%) scale(1.05);
         }
+      }
 
-        100% {
-          transform: scale(1);
-        }
+      #mainContent {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.8s ease;
       }
 
       body {
         font-family: "Arial", sans-serif;
         background-color: #fff3eb;
-        background-size: cover;
-        background-position: center;
         margin: 0;
         padding: 20px;
         text-align: center;
         color: #ffffff;
-        opacity: 0;
-        animation: fadeIn 1.5s ease-in-out forwards;
       }
 
       header {
         background-color: #fff3db;
         color: #ff0000;
-        text-decoration-line: #000000;
         padding: 20px 0;
         border-bottom: 2px solid #e43131;
         border-radius: 8px;
-        font-family: "Roboto", sans-serif;
-        opacity: 0;
-        animation: fadeIn 1s ease forwards 0.5s;
       }
 
       h1 {
         margin: 0;
         font-size: 2.5em;
-      }
-      .marquee-container {
-        width: 100%;
-        overflow: hidden;
-        background: linear-gradient(to right, #000428, #004e92);
-        color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-        margin-bottom: 20px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        animation: pulseZoom 2s ease-in-out infinite;
-      }
-
-      .marquee-track {
-        display: flex;
-        width: fit-content;
-        animation: scroll-left 12s linear infinite;
-      }
-
-      .marquee-text {
-        white-space: nowrap;
-        font-size: 18px;
-        padding: 0 20px;
-        font-weight: bold;
-      }
-
-      @keyframes scroll-left {
-        0% {
-          transform: translateX(0%);
-        }
-        100% {
-          transform: translateX(-50%);
-        }
       }
 
       h4 {
@@ -141,8 +122,7 @@
         margin-bottom: 20px;
         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         text-align: center;
-        opacity: 0;
-        animation: fadeIn 1s ease forwards 0.8s;
+        color: white;
       }
 
       .warning-box {
@@ -152,227 +132,146 @@
         margin-bottom: 20px;
         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         text-align: center;
-        opacity: 0;
-        animation: fadeIn 1s ease forwards 0.8s;
+        color: white;
       }
 
-      .menu-item {
+      .menu-item, .feedback-item {
         display: flex;
         align-items: center;
-        margin: 10px 0;
         justify-content: center;
-        opacity: 0;
-        animation: fadeIn 0.5s ease forwards;
+        margin: 10px 0;
       }
 
-      .feedback-item {
-        display: flex;
-        align-items: center;
-        margin: 10px 0;
-        justify-content: center;
-        opacity: 0;
-        color: rgb(0, 0, 0);
-        animation: fadeIn 0.5s ease forwards;
+      .menu-item button, .feedback-item button {
+        padding: 15px;
+        width: 75%;
+        background: linear-gradient(to right, #ff6a00, #ee0979);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .feedback-item button {
+        background-color: #081174;
+        animation: colorChange 2s infinite, pulseZoom 1.5s infinite;
+      }
+
+      .feedback-item button:hover {
+        background-color: #0a248a;
+        transform: scale(1.05);
       }
 
       @keyframes pulseZoom {
-        0% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.05);
-        }
-        100% {
-          transform: scale(1);
-        }
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
       }
 
-      .menu-item:nth-child(1) {
-        animation-delay: 0.5s;
-      }
-
-      .menu-item:nth-child(2) {
-        animation-delay: 0.55s;
-      }
-
-      .menu-item:nth-child(3) {
-        animation-delay: 0.6s;
-      }
-
-      .menu-item:nth-child(4) {
-        animation-delay: 0.65s;
-      }
-
-      .menu-item:nth-child(5) {
-        animation-delay: 0.7s;
-      }
-
-      .menu-item:nth-child(6) {
-        animation-delay: 0.75s;
-      }
-
-      .menu-item:nth-child(7) {
-        animation-delay: 0.8s;
+      @keyframes colorChange {
+        0% { background-color: #081174; }
+        50% { background-color: #0a248a; }
+        100% { background-color: #081174; }
       }
 
       footer {
         margin-top: 20px;
         font-size: 0.9em;
         color: #000000;
-        opacity: 0;
-        animation: fadeIn 1s ease forwards 2s;
-      }
-
-      button {
-        padding: 15px;
-        width: 75%;
-        background: linear-gradient(to right, #ff6a00, #ee0979);
-        color: rgb(255, 255, 255);
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: opacity 0.3s, transform 0.3s;
-        margin-right: 10px;
-      }
-
-      button:hover {
-        opacity: 0.8;
-        transform: scale(1.05);
-      }
-
-      .feedback-item {
-        text-align: center;
-        margin: 20px;
-      }
-
-      .feedback-item button {
-        background-color: #081174;
-        /* Deep Blue */
-        color: white;
-        border: none;
-        padding: 24px 12px;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-        border-radius: 8px;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-        animation: colorChange 2s infinite, popInOut 1.5s infinite;
-      }
-
-      .feedback-item button:hover {
-        background-color: #0a248a;
-        /* Slightly lighter blue */
-        transform: scale(1.05);
-      }
-
-      .feedback-item button:active {
-        transform: scale(0.95);
       }
     </style>
-    <!-- Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-RQ7R2JQ63Q"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ7R2JQ63Q"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+      function gtag() { dataLayer.push(arguments); }
       gtag("js", new Date());
-
       gtag("config", "G-RQ7R2JQ63Q");
     </script>
   </head>
 
   <body>
-    <header>
-      <h1>NMAMIT NOTES HUB</h1>
-    </header>
-    <!-- <div class="feedback-item">
-    <button onclick="window.location.href='nav/feedback.html'">FEEDBACK FORM</button>
-  </div>  -->
-
-  
-    <div class="container">
-      <div class="welcome-box">
-        <p>🎉 Welcome, NMAMITian!</p>
-        <p>
-          Explore our extensive collection of resources tailored for your
-          courses.
-        </p>
-      </div>
-      <div class="warning-box">
-        <p>
-          Warning:These Notes are designed for IT Courses make sure that its
-          Relevent for Your Course
-        </p>
-      </div>
-
-
-
-      
-      <!-- Marquee Section Start -->
-      <!-- <div
-        class="marquee-container"
-        onclick="window.location.href='subjects/ADLD/0.html'"
-        style="cursor: pointer"
-      >
-        <div class="marquee-track">
-          <div class="marquee-text">
-            📘 Click Here to Access ADLD MATERIALS &nbsp;&nbsp;&nbsp;
-          </div>
-          <div class="marquee-text">
-            📘 Click Here to Access ADLD MATERIALS &nbsp;&nbsp;&nbsp;
-          </div>
-        </div>
-      </div>
-  
-
-       <div
-        class="marquee-container"
-        onclick="window.location.href='subjects/IPP/0.html'"
-        style="cursor: pointer"
-      >
-        <div class="marquee-track">
-          <div class="marquee-text">
-            📘 Click Here to Access PYTHON MATERIALS &nbsp;&nbsp;&nbsp;
-          </div>
-          <div class="marquee-text">
-            📘 Click Here to Access PYTHON MATERIALS &nbsp;&nbsp;&nbsp;
-          </div>
-        </div>
-      </div> -->
-      <!-- Marquee Section End -->
-
-
-      <div class="menu" id="menuList">
-        <div class="menu-item">
-          <button onclick="window.location.href='sem/sem1.html'">
-            SEMESTER 1
-          </button>
-        </div>
-        <div class="menu-item">
-          <button onclick="window.location.href='sem/sem2.html'">
-            SEMESTER 2
-          </button>
-        </div>
-      </div>
+    <!-- Popup + Overlay -->
+    <div id="overlay"></div>
+    <div id="popup">
+      <h2>Welcome to NMAMIT NOTES HUB</h2>
+      <p><strong>Please fill out our feedback form to help us improve!</strong></p>
+      <button class="popup-button" onclick="submitFeedback()">FEEDBACK FORM</button>
+      <br />
+      <button class="popup-button" onclick="hidePopup()">CLOSE</button>
     </div>
-    <h4>
-      Email @
-      <a href="mailto:lakshwebsitedev@gmail.com">Lakshwebsitedev@gmail.com</a>
-    </h4>
-    <h4>
-      Instagram @<a
-        href="https://www.instagram.com/ln_aigal?utm_source=qr&igsh=dG0yYnVvNnR5Ym02"
-        >Ln_Aigal</a
-      >
-    </h4>
 
-    <footer>
-      <p>Last Updated on 22nd May 2025 at 8:06 pm</p>
-      <p>&copy; 2024 Notes For NMAMIT's by NMAMITIAN</p>
-    </footer>
+    <!-- Main Content -->
+    <div id="mainContent">
+      <header>
+        <h1>NMAMIT NOTES HUB</h1>
+      </header>
+
+      <div class="feedback-item">
+        <button onclick="window.location.href='nav/feedback.html'">FEEDBACK FORM</button>
+      </div>
+
+      <div class="container">
+        <div class="welcome-box">
+          <p>🎉 Welcome, NMAMITian!</p>
+          <p>Explore our extensive collection of resources tailored for your courses.</p>
+        </div>
+        <div class="warning-box">
+          <p>Warning: These Notes are designed for IT Courses. Make sure that it's relevant to your course.</p>
+        </div>
+
+        <div class="menu" id="menuList">
+          <div class="menu-item">
+            <button onclick="window.location.href='sem/sem1.html'">SEMESTER 1</button>
+          </div>
+          <div class="menu-item">
+            <button onclick="window.location.href='sem/sem2.html'">SEMESTER 2</button>
+          </div>
+        </div>
+      </div>
+
+      <h4>Email: <a href="mailto:lakshwebsitedev@gmail.com">Lakshwebsitedev@gmail.com</a></h4>
+      <h4>
+        Instagram: <a href="https://www.instagram.com/ln_aigal?utm_source=qr&igsh=dG0yYnVvNnR5Ym02">Ln_Aigal</a>
+      </h4>
+
+      <footer>
+        <p>Last Updated on 17th May 2025 at 9:08 pm</p>
+        <p>&copy; 2024 Notes For NMAMIT's by NMAMITIAN</p>
+      </footer>
+    </div>
+
+    <!-- Script -->
+    <script>
+      window.onload = function () {
+        const feedbackClicked = localStorage.getItem("feedbackClicked");
+        const main = document.getElementById("mainContent");
+
+        if (!feedbackClicked) {
+          document.getElementById('popup').classList.add('active');
+          document.getElementById('overlay').classList.add('active');
+        } else {
+          main.style.opacity = '1';
+          main.style.visibility = 'visible';
+        }
+      };
+
+      function hidePopup() {
+        document.getElementById('popup').classList.remove('active');
+        document.getElementById('overlay').classList.remove('active');
+
+        const main = document.getElementById("mainContent");
+        setTimeout(() => {
+          main.style.opacity = '1';
+          main.style.visibility = 'visible';
+        }, 300);
+      }
+
+      function submitFeedback() {
+        localStorage.setItem("feedbackClicked", "true");
+        window.location.href = 'nav/feedback.html';
+      }
+    </script>
   </body>
 </html>
