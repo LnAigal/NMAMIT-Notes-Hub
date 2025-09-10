@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Theme</title>
+    <link rel="icon" type="image/png" href="../nav/nnhicon.jpg">
+    <meta name="description" content="Customize the visual theme of NMAMIT Notes Hub.">
+    <meta name="keywords" content="nmamit notes hub, themes, custom themes, appearance, dark mode, light mode">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Base CSS - Using CSS Variables for Theming */
+        :root {
+            /* Default / Fallback Theme for the theme selection page itself */
+            --body-bg-color: #F0F2F5; /* Light Gray Blue */
+            --body-text-color: #333333; /* Dark Gray */
+            --container-bg-color: #FFFFFF; /* White */
+            --button-bg-color: #4CAF50; /* Green */
+            --button-text-color: white;
+            --button-hover-bg: #45a049;
+            --header-color: #2C3E50; /* Dark Blue Gray */
+            --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- Theme Definitions for Themes.html preview --- */
+        /* These provide a quick visual cue on the selection page */
+
+        /* Light Themes */
+        [data-theme="light"] {
+            --body-bg-color: #F8F8F8;
+            --body-text-color: #333333;
+            --container-bg-color: #FFFFFF;
+            --button-bg-color: #64B5F6;
+            --button-hover-bg: #2196F3;
+            --header-color: #424242;
+        }
+
+        [data-theme="cupcake"] {
+            --body-bg-color: #FCE4EC;
+            --body-text-color: #4A148C;
+            --container-bg-color: #FFFFFF;
+            --button-bg-color: #EA80FC;
+            --button-hover-bg: #EC407A;
+            --header-color: #880E4F;
+        }
+
+        [data-theme="bumblebee"] {
+            --body-bg-color: #FFFDE7;
+            --body-text-color: #424242;
+            --container-bg-color: #FFFFFF;
+            --button-bg-color: #fdd835;
+            --button-text-color: #424242;
+            --button-hover-bg: #FFA000;
+            --header-color: #BF360C;
+        }
+
+        [data-theme="emerald"] {
+            --body-bg-color: #E8F5E9;
+            --body-text-color: #1B5E20;
+            --container-bg-color: #FFFFFF;
+            --button-bg-color: #66BB6A;
+            --button-hover-bg: #4CAF50;
+            --header-color: #1B5E20;
+        }
+
+        [data-theme="corporate"] {
+            --body-bg-color: #CFD8DC; /* Blue Grey Lighten 4 */
+            --body-text-color: #263238; /* Blue Grey Darken 4 */
+            --container-bg-color: #FFFFFF;
+            --button-bg-color: #455A64; /* Blue Grey Darken 2 */
+            --button-text-color: white;
+            --button-hover-bg: #37474F;
+            --header-color: #263238;
+        }
+
+        [data-theme="retro"] {
+            --body-bg-color: #F9E79F; /* Light Gold */
+            --body-text-color: #34495E; /* Dark Blue */
+            --container-bg-color: #FFFFFF;
+            --button-bg-color: #AF7B7A; /* Faded Red */
+            --button-text-color: white;
+            --button-hover-bg: #C07070;
+            --header-color: #34495E;
+        }
+
+        [data-theme="cyberpunk"] {
+            --body-bg-color: #121212;
+            --body-text-color: #00FFFF; /* Cyan */
+            --container-bg-color: #222222;
+            --button-bg-color: #FF00FF; /* Magenta */
+            --button-text-color: #00FF00; /* Neon Green */
+            --button-hover-bg: #8A2BE2; /* Blue Violet */
+            --header-color: #00FFFF;
+        }
+
+        [data-theme="valentine"] {
+            --body-bg-color: #FFEBEE; /* Light Pink */
+            --body-text-color: #C2185B; /* Dark Pink */
+            --container-bg-color: #FFFFFF;
+            --button-bg-color: #EC407A; /* Medium Pink */
+            --button-text-color: white;
+            --button-hover-bg: #E91E63;
+            --header-color: #C2185B;
+        }
+
+        [data-theme="garden"] {
+            --body-bg-color: #E8F5E9; /* Light Green */
+            --body-text-color: #388E3C; /* Dark Green */
+            --container-bg-color: #FFFFFF;
+            --button-bg-color: #4CAF50; /* Green */
+            --button-text-color: white;
+            --button-hover-bg: #66BB6A;
+            --header-color: #2E7D32;
+        }
+
+        [data-theme="lofi"] {
+            --body-bg-color: #F5F5DC; /* Beige */
+            --body-text-color: #424242; /* Dark Gray */
+            --container-bg-color: #FFFFFF;
+            --button-bg-color: #9E9E9E; /* Gray */
+            --button-text-color: white;
+            --button-hover-bg: #757575;
+            --header-color: #616161;
+        }
+
+        [data-theme="pastel"] {
+            --body-bg-color: #F3E5F5; /* Lavender Blush */
+            --body-text-color: #8E24AA; /* Purple */
+            --container-bg-color: #FFFFFF;
+            --button-bg-color: #BA68C8; /* Light Purple */
+            --button-text-color: white;
+            --button-hover-bg: #AB47BC;
+            --header-color: #6A1B9A;
+        }
+
+        [data-theme="fantasy"] {
+            --body-bg-color: #E1F5FE; /* Light Blue */
+            --body-text-color: #0D47A1; /* Dark Blue */
+            --container-bg-color: #FFFFFF;
+            --button-bg-color: #2196F3; /* Blue */
+            --button-text-color: white;
+            --button-hover-bg: #1976D2;
+            --header-color: #0D47A1;
+        }
+
+        [data-theme="wireframe"] {
+            --body-bg-color: #EEEEEE;
+            --body-text-color: #424242;
+            --container-bg-color: #FFFFFF;
+            --button-bg-color: #BDBDBD;
+            --button-text-color: #424242;
+            --button-hover-bg: #9E9E9E;
+            --header-color: #424242;
+        }
+
+        [data-theme="cmyk"] {
+            --body-bg-color: #F0F4C3; /* Lime A100 */
+            --body-text-color: #3F51B5; /* Indigo */
+            --container-bg-color: #FFFFFF;
+            --button-bg-color: #E040FB; /* Purple A400 */
+            --button-text-color: white;
+            --button-hover-bg: #D500F9;
+            --header-color: #3F51B5;
+        }
+
+        [data-theme="autumn"] {
+            --body-bg-color: #FBE9E7; /* Deep Orange A100 */
+            --body-text-color: #BF360C; /* Deep Orange Darken 4 */
+            --container-bg-color: #FFFFFF;
+            --button-bg-color: #FF5722; /* Deep Orange */
+            --button-text-color: white;
+            --button-hover-bg: #F4511E;
+            --header-color: #BF360C;
+        }
+
+        [data-theme="acid"] {
+            --body-bg-color: #EEFF41; /* Lime A700 */
+            --body-text-color: #33691E; /* Lime Darken 4 */
+            --container-bg-color: #FFFFFF;
+            --button-bg-color: #AEEA00; /* Lime A700 (darker) */
+            --button-text-color: black;
+            --button-hover-bg: #C6FF00;
+            --header-color: #33691E;
+        }
+
+        [data-theme="lemonade"] {
+            --body-bg-color: #FFFDE7; /* Light Yellow */
+            --body-text-color: #FFC107; /* Amber */
+            --container-bg-color: #FFFFFF;
+            --button-bg-color: #FFEB3B; /* Yellow */
+            --button-text-color: #424242;
+            --button-hover-bg: #FFD54F;
+            --header-color: #F57F17;
+        }
+
+        [data-theme="winter"] {
+            --body-bg-color: #E3F2FD; /* Light Blue */
+            --body-text-color: #1A237E; /* Indigo Darken 4 */
+            --container-bg-color: #FFFFFF;
+            --button-bg-color: #2196F3; /* Blue */
+            --button-text-color: white;
+            --button-hover-bg: #1976D2;
+            --header-color: #1A237E;
+        }
+
+        [data-theme="nord"] {
+            --body-bg-color: #2E3440; /* Nord0 */
+            --body-text-color: #D8DEE9; /* Nord4 */
+            --container-bg-color: #3B4252; /* Nord1 */
+            --button-bg-color: #88C0D0; /* Nord8 */
+            --button-text-color: #2E3440;
+            --button-hover-bg: #81A1C1; /* Nord9 */
+            --header-color: #D8DEE9;
+        }
+
+        /* Dark Themes */
+        [data-theme="dark"] {
+            --body-bg-color: #2C2C2C;
+            --body-text-color: #E0E0E0;
+            --container-bg-color: #333333;
+            --button-bg-color: #424242;
+            --button-text-color: white;
+            --button-hover-bg: #616161;
+            --header-color: #FFFFFF;
+        }
+
+        [data-theme="synthwave"] {
+            --body-bg-color: #2A1A5E; /* Dark Purple */
+            --body-text-color: #E0E0E0;
+            --container-bg-color: #3C2E77;
+            --button-bg-color: #FF00FF; /* Magenta */
+            --button-text-color: #00FFFF; /* Cyan */
+            --button-hover-bg: #FFC0CB; /* Pink */
+            --header-color: #FFC0CB;
+        }
+
+        [data-theme="halloween"] {
+            --body-bg-color: #1A1A1A;
+            --body-text-color: #F57C00; /* Dark Orange */
+            --container-bg-color: #212121;
+            --button-bg-color: #FF6F00; /* Orange */
+            --button-text-color: white;
+            --button-hover-bg: #FF8F00;
+            --header-color: #FF9800;
+        }
+
+        [data-theme="forest"] {
+            --body-bg-color: #2E473D; /* Dark Forest Green */
+            --body-text-color: #E0F2F1; /* Teal Lighten 5 */
+            --container-bg-color: #385E4E;
+            --button-bg-color: #4CAF50; /* Green */
+            --button-text-color: white;
+            --button-hover-bg: #66BB6A;
+            --header-color: #E0F2F1;
+        }
+
+        [data-theme="black"] {
+            --body-bg-color: #000000;
+            --body-text-color: #FFFFFF;
+            --container-bg-color: #121212;
+            --button-bg-color: #212121;
+            --button-text-color: white;
+            --button-hover-bg: #424242;
+            --header-color: #FFFFFF;
+        }
+
+        [data-theme="luxury"] {
+            --body-bg-color: #1C1C1C;
+            --body-text-color: #D4AF37; /* Gold */
+            --container-bg-color: #2A2A2A;
+            --button-bg-color: #D4AF37;
+            --button-text-color: black;
+            --button-hover-bg: #FFD700;
+            --header-color: #FFD700;
+        }
+
+        [data-theme="dracula"] {
+            --body-bg-color: #282A36;
+            --body-text-color: #F8F8F2;
+            --container-bg-color: #3A3C4A;
+            --button-bg-color: #FF79C6;
+            --button-hover-bg: #BD93F9;
+            --header-color: #F8F8F2;
+        }
+
+        [data-theme="business"] {
+            --body-bg-color: #263238; /* Blue Grey Darken 4 */
+            --body-text-color: #E0E0E0;
+            --container-bg-color: #37474F;
+            --button-bg-color: #607D8B; /* Blue Grey */
+            --button-text-color: white;
+            --button-hover-bg: #78909C;
+            --header-color: #FFFFFF;
+        }
+
+        [data-theme="night"] {
+            --body-bg-color: #1A237E; /* Indigo Darken 4 */
+            --body-text-color: #BBDEFB; /* Light Blue */
+            --container-bg-color: #283593;
+            --button-bg-color: #3F51B5; /* Indigo */
+            --button-text-color: white;
+            --button-hover-bg: #5C6BC0;
+            --header-color: #BBDEFB;
+        }
+
+        [data-theme="coffee"] {
+            --body-bg-color: #3E2723; /* Brown Darken 4 */
+            --body-text-color: #EFEBE9; /* Brown Lighten 5 */
+            --container-bg-color: #4E342E;
+            --button-bg-color: #6D4C41; /* Brown Darken 1 */
+            --button-text-color: white;
+            --button-hover-bg: #795548;
+            --header-color: #EFEBE9;
+        }
+
+        [data-theme="dim"] {
+            --body-bg-color: #37474F; /* Blue Grey Darken 3 */
+            --body-text-color: #CFD8DC; /* Blue Grey Lighten 4 */
+            --container-bg-color: #455A64;
+            --button-bg-color: #546E7A; /* Blue Grey Darken 1 */
+            --button-text-color: white;
+            --button-hover-bg: #607D8B;
+            --header-color: #CFD8DC;
+        }
+
+        [data-theme="sunset"] {
+            --body-bg-color: #263238; /* Dark Blue Grey */
+            --body-text-color: #FFD180; /* Orange A100 */
+            --container-bg-color: #37474F;
+            --button-bg-color: #FFB300; /* Amber Darken 2 */
+            --button-text-color: #263238;
+            --button-hover-bg: #FFC107;
+            --header-color: #FFD180;
+        }
+
+        [data-theme="aqua"] {
+            --body-bg-color: #00BCD4; /* Cyan */
+            --body-text-color: #006064; /* Cyan Darken 4 */
+            --container-bg-color: #E0F7FA;
+            --button-bg-color: #00ACC1; /* Cyan Darken 1 */
+            --button-text-color: white;
+            --button-hover-bg: #00838F;
+            --header-color: #006064;
+        }
+
+        /* General Styles for this Theme Selection Page */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--body-bg-color);
+            color: var(--body-text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        h1 {
+            color: var(--header-color);
+            margin-bottom: 30px;
+            font-size: 2.8em;
+            text-align: center;
+            transition: color 0.3s ease;
+        }
+
+        .theme-container {
+            background-color: var(--container-bg-color);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .theme-category {
+            margin-bottom: 25px;
+        }
+
+        .theme-category h2 {
+            color: var(--header-color);
+            font-size: 1.8em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: left;
+            border-bottom: 2px solid var(--button-bg-color); /* Subtle line */
+            padding-bottom: 5px;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .theme-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .theme-button {
+            padding: 15px 10px;
+            background-color: var(--button-bg-color);
+            color: var(--button-text-color);
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .theme-button:hover {
+            background-color: var(--button-hover-bg);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .theme-button.active {
+            border: 3px solid #FFD700; /* Gold border for active theme */
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+            transform: scale(1.05);
+        }
+
+        .current-theme-display {
+            margin-bottom: 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: var(--header-color);
+            transition: color 0.3s ease;
+        }
+
+        .current-theme-name {
+            color: var(--button-bg-color);
+            text-transform: capitalize;
+            transition: color 0.3s ease;
+        }
+
+        @media (max-width: 600px) {
+            .theme-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .theme-container {
+                padding: 20px;
+            }
+        }
+    </style>
+    <script>
+        // Function to set the theme and save it to local storage
+        function setTheme(themeName) {
+            localStorage.setItem('theme', themeName);
+            document.documentElement.setAttribute('data-theme', themeName);
+            updateCurrentThemeDisplay(themeName);
+            highlightActiveTheme(themeName);
+        }
+
+        // Function to update the display of the current theme
+        function updateCurrentThemeDisplay(themeName) {
+            const currentThemeSpan = document.getElementById('currentThemeName');
+            if (currentThemeSpan) {
+                currentThemeSpan.textContent = themeName.charAt(0).toUpperCase() + themeName.slice(1);
+            }
+        }
+
+        // Function to highlight the active theme button
+        function highlightActiveTheme(activeTheme) {
+            const buttons = document.querySelectorAll('.theme-button');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+                if (button.dataset.theme === activeTheme) {
+                    button.classList.add('active');
+                }
+            });
+        }
+
+        // On page load, apply the stored theme or a default
+        document.addEventListener('DOMContentLoaded', () => {
+            const storedTheme = localStorage.getItem('theme') || 'bumblebee'; // Default theme
+            setTheme(storedTheme); // Apply theme to this page immediately
+
+            // Populate themes from your list
+            const lightThemes = [
+                'light', 'cupcake', 'bumblebee', 'emerald', 'corporate', 'retro', 'cyberpunk',
+                'valentine', 'garden', 'lofi', 'pastel', 'fantasy', 'wireframe', 'cmyk',
+                'autumn', 'acid', 'lemonade', 'winter', 'nord'
+            ];
+            const darkThemes = [
+                'dark', 'synthwave', 'halloween', 'forest', 'black', 'luxury', 'dracula',
+                'business', 'night', 'coffee', 'dim', 'sunset', 'aqua'
+            ];
+
+            const lightThemeGrid = document.getElementById('lightThemeGrid');
+            const darkThemeGrid = document.getElementById('darkThemeGrid');
+
+            lightThemes.forEach(theme => {
+                const button = document.createElement('button');
+                button.classList.add('theme-button');
+                button.dataset.theme = theme;
+                button.textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
+                button.onclick = () => {
+                    setTheme(theme);
+                };
+                lightThemeGrid.appendChild(button);
+            });
+
+            darkThemes.forEach(theme => {
+                const button = document.createElement('button');
+                button.classList.add('theme-button');
+                button.dataset.theme = theme;
+                button.textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
+                button.onclick = () => {
+                    setTheme(theme);
+                };
+                darkThemeGrid.appendChild(button);
+            });
+
+            highlightActiveTheme(storedTheme); // Highlight the initially active theme
+        });
+    </script>
+</head>
+<body>
+    <h1>Choose Your Notes Hub Theme</h1>
+
+    <div class="theme-container">
+        <div class="current-theme-display">
+            Current Theme: <span id="currentThemeName"></span>
+        </div>
+
+        <div class="theme-category">
+            <h2>Light Themes</h2>
+            <div id="lightThemeGrid" class="theme-grid">
+            </div>
+        </div>
+
+        <div class="theme-category">
+            <h2>Dark Themes</h2>
+            <div id="darkThemeGrid" class="theme-grid">
+            </div>
+        </div>
+
+        <button class="theme-button" onclick="window.history.back()" style="margin-top: 30px; width: auto; padding: 15px 30px;">
+            Go to Notes Hub <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+</body>
+</html>
+```

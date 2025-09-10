@@ -54,7 +54,7 @@ footer {
     margin: 15px 0;
     padding: 15px;
     /* Increased padding for larger buttons */
-    background: linear-gradient(to right, #ff6a00, #ee0979);
+    background: linear-gradient(to right, #000000, #fd2828);
     /* Gradient for links */
     color: white;
     text-decoration: none;
@@ -125,7 +125,8 @@ nav {
 }
 
 nav div {
-    background: linear-gradient(to right, #ff6a00, #ee0979);
+      background: linear-gradient(to right, #000000, #fd2828);
+
     /* Gradient background */
     border-radius: 8px;
     /* Rounded corners */
