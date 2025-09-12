@@ -5,338 +5,165 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="../nav/nnhicon.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="TtNL9G3o7P5iHPxrK_N3kUJvanidGTUtzKgATR0jWzA" />
-    <meta name="description" content="NMAMIT Notes Hub for NMAMIT IT Students.">
-    <meta name="keywords" content="nmamit notes hub, notes,laksh">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <title>PHYSICS CYCLE</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     <style>
-        /* Base styles from your original code */
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         body {
             font-family: 'Arial', sans-serif;
             background-color: #fff3eb;
-            background-size: cover;
-            background-position: center;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             text-align: center;
-            color: #ffffff; /* This color might be for certain elements, general text will be black due to header/footer */
+            color: #000000;
             opacity: 0;
             animation: fadeIn 1.5s ease-in-out forwards;
-            padding-top: 100px; /* Adjusted padding-top to account for fixed header */
-            min-height: 100vh; /* Ensure body takes full viewport height */
-            display: flex;
-            flex-direction: column; /* Allow footer to stick to bottom if content is short */
         }
 
         header {
             background-color: #fff3db;
             color: #ff0000;
-            padding: 20px; /* Consistent padding */
+            text-decoration-line: #000000;
+            padding: 20px 0;
             border-bottom: 2px solid #e43131;
             border-radius: 8px;
             font-family: 'Roboto', sans-serif;
             opacity: 0;
             animation: fadeIn 1s ease forwards 0.5s;
-            display: flex; /* Use flexbox for header content */
-            justify-content: space-between; /* Space out title and sidebar button */
-            align-items: center; /* Vertically align items */
-            position: fixed; /* Make header sticky */
-            top: 0;
-            left: 0;
-            width: 100%;
-            box-sizing: border-box; /* Include padding in width */
-            z-index: 1001; /* Higher z-index */
         }
 
-        h1 {
+        header h1 {
+             font-weight: 900; /* ✅ Super thick */
+      letter-spacing: 2px;
+      margin: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            list-style: none;
+            /* Removes bullets */
+            display: flex;
+            /* Makes items inline */
+            padding: 15px;
             margin: 0;
-            font-size: 2.5em;
-            text-align: left;
-            flex-grow: 1; /* Allows h1 to take up available space */
         }
 
-        h3 {
-            color: #000000;
-            text-align: left; /* Align to the left within the wrapper */
-            margin-top: 30px; /* Add some top margin */
+        nav div {
+              background: linear-gradient(to right, #000000, #fd2828);
+
+
         }
 
-        /* New wrapper for consistent main content alignment */
-        .main-content-wrapper {
-            max-width: 800px;
-            margin: 0 auto; /* Center the wrapper */
-            padding: 0 10px; /* Add some horizontal padding inside the wrapper */
-            flex-grow: 1; /* Allow content to grow and push footer down */
+        .navbar li {
+            margin: 0 1px;
         }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+        }
+        /* .navbar a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        } */
+
+        h3 { color: #000000; }
 
         .menu-item {
             display: flex;
             align-items: center;
-            justify-content: center; /* Center the button pair */
-            gap: 10px; /* Space between the two buttons */
-            margin: 10px 0; /* Vertical margin for each item */
-            opacity: 0;
+            justify-content: center;
+            margin: 10px 0;
             animation: fadeIn 0.5s ease forwards;
         }
 
-        /* Existing animation delays for menu items */
-        .menu-item:nth-child(1) { animation-delay: 0.5s; }
-        .menu-item:nth-child(2) { animation-delay: 0.55s; }
-        .menu-item:nth-child(3) { animation-delay: 0.60s; }
-        .menu-item:nth-child(4) { animation-delay: 0.65s; }
-        .menu-item:nth-child(5) { animation-delay: 0.70s; }
-        .menu-item:nth-child(6) { animation-delay: 0.75s; }
-        .menu-item:nth-child(7) { animation-delay: 0.80s; }
-        .menu-item:nth-child(8) { animation-delay: 0.85s; }
-        .menu-item:nth-child(9) { animation-delay: 0.90s; }
-        .menu-item:nth-child(10) { animation-delay: 0.95s; }
-        .menu-item:nth-child(11) { animation-delay: 1.00s; }
-
-
         footer {
-            margin-top: 40px; /* Increased margin-top for footer */
+            margin-top: 20px;
             font-size: 0.9em;
             color: #000000;
-            opacity: 0;
-            animation: fadeIn 0.82s ease forwards 0.90s;
+            animation: fadeIn 0.82s ease forwards 0.9s;
         }
 
         button {
             padding: 15px;
-            width: calc(45% - 5px); /* Adjusted width to account for gap */
-            background: linear-gradient(to right, #ff6a00, #ee0979);
-            color: rgb(255, 255, 255);
+            width: 45%;
+            background: linear-gradient(to right, #000000, #fd2828);
+            color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            margin-right: 10px;
             transition: opacity 0.3s, transform 0.3s;
-            /* Removed margin-right: 10px as gap handles it */
         }
+        button:hover { opacity: 0.8; transform: scale(1.05); }
 
-        button:hover {
-            opacity: 0.8;
-            transform: scale(1.05);
-        }
-
-        .search-container {
-            margin: 20px 0; /* Reset margin as wrapper handles centering */
-            text-align: center; /* Center input within its own container */
-        }
-
+        .search-container { margin: 20px 0; }
         input[type="text"] {
-            width: 100%; /* Full width of its parent (.search-container within .main-content-wrapper) */
+            width: 75%;
             padding: 10px;
             border-radius: 5px;
             border: 1px solid #081174;
             font-size: 1em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: border-color 0.3s;
-            box-sizing: border-box; /* Include padding/border in width */
-        }
-
-        input[type="text"]:focus {
-            border-color: #2193b0;
-            outline: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
         .back-button {
             margin-top: 20px;
             padding: 10px 15px;
-            background: linear-gradient(to right, #ff6a00, #ee0979);
+            background: linear-gradient(to right, #000000, #fd2828);
             color: white;
             border-radius: 5px;
             border: none;
             cursor: pointer;
-            text-align: center;
-            transition: opacity 0.3s, transform 0.3s;
-            width: 100%; /* Take full width of its parent, which is centered */
+            width: 100%;
             max-width: 200px;
-            display: block; /* Make it a block element to respect max-width and margin auto */
-            margin-left: auto;
-            margin-right: auto;
             font-size: 0.9em;
         }
-
-        .back-button:hover {
-            opacity: 0.8;
-            transform: scale(1.05);
-        }
-
-        /* Marquee styles - unchanged, but ensure its parent allows it to span full width */
-        .marquee-container {
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            background-color: #f1f1f1;
-            padding: 5px 0;
-            position: relative;
-        }
-
-        .marquee {
-            display: inline-block;
-            animation: continuous-scroll 10s linear infinite;
-            position: relative;
-        }
-
-        @keyframes continuous-scroll {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        .marquee a {
-            color: blue;
-            text-decoration: underline;
-            margin-left: 10px;
-        }
-
-        /* --- Sidebar Specific Styles --- */
-        .sidebar-toggle-button {
-            background: none;
-            border: none;
-            color: #ff0000; /* Match header text color */
-            font-size: 2em; /* Make icon larger */
-            cursor: pointer;
-            padding: 5px;
-            margin-left: 10px; /* Space from title */
-            transition: transform 0.2s ease-in-out;
-            display: flex; /* Use flex to center icon */
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            animation: fadeIn 1s ease forwards 0.5s;
-        }
-
-        .sidebar-toggle-button:hover {
-            transform: scale(1.1);
-        }
-
-        /* --- Sidebar Specific Styles --- */
-.sidebar {
-    height: 100%;
-    width: 0; /* Initially hidden */
-    position: fixed;
-    z-index: 1002; /* <-- CHANGED: Make this higher than the header's z-index (1001) */
-    top: 0;
-    left: 0;
-    background-color: #2c3e50; /* Darker background for sidebar */
-    overflow-x: hidden;
-    transition: 0.5s; /* Smooth slide-in effect */
-    padding-top: 100px; /* <-- CHANGED: Increased padding-top for more clearance */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align links to the left */
-}
-
-header {
-    /* ... (rest of your header styles) ... */
-    z-index: 1001; /* Keep header z-index as it is */
-}
-
-        .sidebar.open {
-            width: 250px; /* Width when open */
-        }
-
-        .sidebar a {
-            padding: 15px 25px;
-            text-decoration: none;
-            font-size: 1.2em;
-            color: #f1f1f1; /* Light text for links */
-            display: block;
-            transition: 0.3s;
-            width: 100%;
-            box-sizing: border-box; /* Include padding in width */
-            text-align: left;
-        }
-
-        .sidebar a:hover {
-            color: #fff;
-            background-color: #34495e; /* Slightly lighter on hover */
-        }
-
-        .sidebar .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-            color: #f1f1f1;
-        }
-
-        .sidebar .closebtn:hover {
-            color: #ff0000; /* Highlight close button on hover */
-        }
-
-        /* Overlay to close sidebar when clicking outside */
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
-            z-index: 999; /* Below sidebar, above main content */
-            display: none; /* Hidden by default */
-        }
-
-        .overlay.active {
-            display: block;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2em;
-            }
-            .sidebar.open {
-                width: 200px; /* Smaller width for sidebar on smaller screens */
-            }
-            .sidebar a {
-                font-size: 1.1em;
-                padding: 12px 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header {
-                padding: 15px;
-            }
-            h1 {
-                font-size: 1.8em;
-            }
-            body {
-                padding: 10px; /* Reduce overall body padding */
-                padding-top: 80px; /* Adjust padding-top for smaller fixed header */
-            }
-            .main-content-wrapper {
-                padding: 0 5px; /* Reduce padding inside wrapper */
-            }
-            .menu-item button {
-                width: 100%; /* Buttons stack on very small screens */
-                margin-right: 0;
-            }
-            .menu-item {
-                flex-direction: column; /* Stack buttons vertically */
-                gap: 5px; /* Smaller gap when stacked */
-            }
-        }
+        .back-button:hover { opacity: 0.8; transform: scale(1.05); }
     </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>PHYSICS CYCLE</h1>
+     </header>
+        <!-- Navbar -->
+        <nav>
+            <div>
+                <ul class="navbar">
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="../nav/updates.html"><i class="fas fa-sync-alt"></i> Updates</a></li>
+                    <li><a href="../nav/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="../nav/qna.html"><i class="fas fa-question-circle"></i> Q&A</a></li>
+                    <li><a href="../nav/contribute.html"><i class="fas fa-donate"></i> Contribute</a></li>
+                    <!-- <li><a href="../../nav/themes.html"><i class="fas fa-palette"></i> Themes</a></li> -->
+                </ul>
+            </div>
+        </nav>
+   
+
+    <!-- Search -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search Course or Course Code" onkeyup="filterCourses()" />
+    </div>
+
+    <!-- Course List -->
+    <h3 class="available-pdfs">Available Courses:</h3>
+    <div class="menu" id="menuList"></div>
+
+    <!-- Footer -->
+    <footer>
+        <button class="back-button" onclick="goBack()">BACK</button>
+        <p>&copy; 2024 Notes For NMAMIT's by NMAMITIAN</p>
+    </footer>
+
+    <!-- Scripts -->
     <script>
         const courses = [
             { name: 'Basic Electronics', code: 'EC1001-1', link: '../subjects/BE/0.html' },
@@ -345,24 +172,25 @@ header {
             { name: 'Cyber Security', code: 'IS1101-1', link: '../subjects/CS/0.html' },
             { name: 'Quantum Computing and Modern Physics', code: 'PH1004-1', link: '../subjects/QCMP/0.html' },
             { name: 'Problem Solving through Programming', code: 'CS1001-2', link: '../subjects/PSP/0.html' },
-            { name: 'Biology for Engineers', code: 'BT1651-1', link: '../subjects/BfE/0.html' }, /* Corrected path from 'bt.html' to 'BfE/0.html' */
-            { name: 'Environmental Studies and Sustainability', code: 'CV1005-1', link: '../subjects/EVS/0.html' }, /* Corrected path from 'cv.html' to 'EVS/0.html' */
+            { name: 'Biology for Engineers', code: 'BT1651-1', link: '../subjects/BfE/0.html' },
+            { name: 'Environmental Studies and Sustainability', code: 'CV1005-1', link: '../subjects/EVS/0.html' },
             { name: 'Technical English', code: 'HU1001-1', link: '../subjects/TE/0.html' }
         ];
 
         function filterCourses() {
             const searchInput = document.getElementById('searchInput').value.toLowerCase();
             const menuList = document.getElementById('menuList');
-            menuList.innerHTML = ''; // Clear current list
+            menuList.innerHTML = '';
 
             const filteredCourses = courses.filter(course =>
                 course.name.toLowerCase().includes(searchInput) ||
                 course.code.toLowerCase().includes(searchInput)
             );
 
-            filteredCourses.forEach(course => {
+            filteredCourses.forEach((course, index) => {
                 const menuItem = document.createElement('div');
                 menuItem.classList.add('menu-item');
+                menuItem.style.setProperty('--i', index);
                 menuItem.innerHTML = `
                     <button onclick="window.location.href='${course.link}'">${course.name}</button>
                     <button onclick="window.location.href='${course.link}'">${course.code}</button>
@@ -371,81 +199,13 @@ header {
             });
 
             if (filteredCourses.length === 0) {
-                menuList.innerHTML = '<p style="color: black;">No courses found. Please try a different search.</p>';
+                menuList.innerHTML = '<p style="color:black;">No courses found. Please try a different search.</p>';
             }
         }
 
-        function goBack() {
-            window.location.href = '../index.html';
-        }
+        function goBack() { window.location.href = '../index.html'; }
 
-        // --- Sidebar JavaScript ---
-        function openSidebar() {
-            document.getElementById("mySidebar").classList.add('open');
-            document.getElementById("overlay").classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling when sidebar is open
-        }
-
-        function closeSidebar() {
-            document.getElementById("mySidebar").classList.remove('open');
-            document.getElementById("overlay").classList.remove('active');
-            document.body.style.overflow = ''; // Restore scrolling
-        }
-
-        // Close sidebar if escape key is pressed
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape" && document.getElementById("mySidebar").classList.contains('open')) {
-                closeSidebar();
-            }
-        });
-
-        // Initial population of courses on load
-        document.addEventListener('DOMContentLoaded', () => {
-            filterCourses(); // Populate initial list on page load
-        });
+        document.addEventListener('DOMContentLoaded', () => filterCourses());
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ7R2JQ63Q"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-RQ7R2JQ63Q'); // Replace with your GA4 Measurement ID
-    </script>
-</head>
-
-<body>
-    <div id="overlay" class="overlay" onclick="closeSidebar()"></div>
-
-    <div id="mySidebar" class="sidebar">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()" aria-label="Close navigation menu">&times;</a>
-    <a href="../index.html"><i class="fas fa-home"></i> Home</a>
-    <a href="../nav/updates.html"><i class="fas fa-sync-alt"></i> Updates</a>
-    <a href="../nav/contact.html"><i class="fas fa-envelope"></i> Contact</a>
-    <a href="../nav/qna.html"><i class="fas fa-question-circle"></i> Q&A</a>
-    <a href="../nav/contribute.html"><i class="fas fa-donate"></i> Contribute</a>
-    <a href="../../nav/themes.html"><i class="fas fa-palette"></i> Themes</a> 
-</div>
-
-    <header>
-        <h1>PHYSICS CYCLE</h1>
-        <button class="sidebar-toggle-button" onclick="openSidebar()" aria-label="Open navigation menu">
-            <i class="fas fa-ellipsis-v"></i> </button>
-    </header>
-
-    <div class="main-content-wrapper">
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search Course or Course Code" onkeyup="filterCourses()" />
-        </div>
-
-        <h3 class="available-pdfs">Available Courses:</h3>
-        <div class="menu" id="menuList">
-            </div>
-    </div>
-
-    <footer>
-        <button class="back-button" onclick="goBack()">BACK</button>
-        <p>&copy; 2024 Notes For NMAMIT's by NMAMITIAN</p>
-    </footer>
 </body>
-
 </html>
