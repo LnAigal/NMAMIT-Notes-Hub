@@ -16,10 +16,7 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/authDB', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
+mongoose.connect('mongodb://localhost:27017/authDB')
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.log('Failed to connect to MongoDB', err));
 
