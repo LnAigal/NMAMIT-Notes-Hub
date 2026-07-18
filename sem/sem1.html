@@ -14,6 +14,8 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        * { box-sizing: border-box; }
+
         body {
             font-family: 'Arial', sans-serif;
             background-color: #fff3eb;
@@ -38,25 +40,38 @@
         }
 
         header h1 {
-             font-weight: 900; /* ✅ Super thick */
-      letter-spacing: 2px;
-      margin: 0;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin: 0;
+            font-size: clamp(1.5em, 5vw, 2.5em);
         }
 
-        /* Navbar */
         .navbar {
             list-style: none;
-            /* Removes bullets */
             display: flex;
-            /* Makes items inline */
             padding: 15px;
             margin: 0;
         }
 
         nav div {
-              background: linear-gradient(to right, #000000, #fd2828);
+            background: linear-gradient(to right, #000000, #fd2828);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-radius: 8px;
+        }
 
-
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            padding: 12px 15px;
+            cursor: pointer;
+            text-align: left;
+            width: 100%;
         }
 
         .navbar li {
@@ -67,10 +82,13 @@
             text-decoration: none;
             color: white;
             border-radius: 5px;
+            padding: 15px;
+            transition: background-color 0.3s ease;
         }
-        /* .navbar a:hover {
+
+        .navbar a:hover {
             background: rgba(255, 255, 255, 0.2);
-        } */
+        }
 
         h3 { color: #000000; }
 
@@ -125,6 +143,70 @@
             font-size: 0.9em;
         }
         .back-button:hover { opacity: 0.8; transform: scale(1.05); }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .navbar {
+                display: none;
+                flex-direction: column;
+                padding: 0;
+            }
+
+            .navbar.open {
+                display: flex;
+            }
+
+            .navbar li {
+                margin: 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .navbar a {
+                display: block;
+                padding: 12px 15px;
+                width: 100%;
+            }
+
+            button {
+                width: 90%;
+                margin: 5px 0;
+            }
+
+            .menu-item {
+                flex-direction: column;
+            }
+
+            input[type="text"] {
+                width: 90%;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 12px 0;
+            }
+
+            button {
+                padding: 12px;
+                font-size: 0.9em;
+            }
+
+            input[type="text"] {
+                width: 95%;
+                padding: 8px;
+            }
+
+            footer {
+                font-size: 0.8em;
+            }
+        }
     </style>
 </head>
 
@@ -136,13 +218,15 @@
         <!-- Navbar -->
         <nav>
             <div>
-                <ul class="navbar">
+                <button class="hamburger" onclick="toggleNav()" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="navbar" id="navbar">
                     <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
                     <li><a href="../nav/updates.html"><i class="fas fa-sync-alt"></i> Updates</a></li>
                     <li><a href="../nav/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
                     <li><a href="../nav/qna.html"><i class="fas fa-question-circle"></i> Q&A</a></li>
                     <li><a href="../nav/contribute.html"><i class="fas fa-donate"></i> Contribute</a></li>
-                    <!-- <li><a href="../../nav/themes.html"><i class="fas fa-palette"></i> Themes</a></li> -->
                 </ul>
             </div>
         </nav>
@@ -204,6 +288,10 @@
         }
 
         function goBack() { window.location.href = '../index.html'; }
+
+        function toggleNav() {
+            document.getElementById('navbar').classList.toggle('open');
+        }
 
         document.addEventListener('DOMContentLoaded', () => filterCourses());
     </script>

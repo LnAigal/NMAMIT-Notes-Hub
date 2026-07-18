@@ -34,6 +34,10 @@
   gtag('js', new Date());
   gtag('config', 'G-RQ7R2JQ63Q'); // Replace with your GA4 Measurement ID
 </script>
+<script>
+function toggleNav() { document.getElementById("navbar").classList.toggle("open"); }
+</script>
+
 
       
 </head>
@@ -45,7 +49,11 @@
     <div>
         <nav>
             <div>
-                <ul class="navbar">
+                <button class="hamburger" onclick="toggleNav()" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <ul class="navbar" id="navbar">
                     <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
                     <li><a href="updates.html"><i class="fas fa-sync-alt"></i> Updates</a></li>
                     <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>

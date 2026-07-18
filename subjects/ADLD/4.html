@@ -27,7 +27,11 @@
     <div>
         <nav>
             <div>
-                <ul class="navbar">
+                <button class="hamburger" onclick="toggleNav()" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <ul class="navbar" id="navbar">
                     <li><a href="../../index.html"><i class="fas fa-home"></i> Home</a></li>
                     <li><a href="../../nav/updates.html"><i class="fas fa-sync-alt"></i> Updates</a></li>
                     <li><a href="../../nav/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
@@ -67,6 +71,10 @@
             });
         }
     </script>
+<script>
+function toggleNav() { document.getElementById("navbar").classList.toggle("open"); }
+</script>
+
 </body>
 
 </html>kb n
