@@ -1,1 +1,63 @@
-DATA UNAVAILABLE
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../../nav/nnhicon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENGINEERING VISUALIZATION</title>
+    <link rel="stylesheet" href="../../nav/sub1.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ7R2JQ63Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-RQ7R2JQ63Q');
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>ENGINEERING VISUALIZATION</h1>
+    </header>
+    <div>
+        <nav>
+            <div>
+                <button class="hamburger" onclick="toggleNav()" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="navbar" id="navbar">
+                    <li><a href="../../index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="../../nav/updates.html"><i class="fas fa-sync-alt"></i> Updates</a></li>
+                    <li><a href="../../nav/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="../../nav/qna.html"><i class="fas fa-question-circle"></i> Q&A</a></li>
+                    <li><a href="../../nav/contribute.html"><i class="fas fa-donate"></i> Contribute</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="search-section">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search the Topic" oninput="filterLinks()">
+        </div>
+        <h3 class="available-pdfs">Available PDFs:</h3>
+        <p class="explore-text">Study materials coming soon. Check back later.</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 Notes For NMAMIT's by NMAMITIAN</p>
+    </footer>
+    <script>
+        function filterLinks() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const links = document.querySelectorAll('.pdf-link');
+            links.forEach(link => {
+                const keywords = link.getAttribute('data-keywords') ? link.getAttribute('data-keywords').toLowerCase() : '';
+                link.style.display = keywords.includes(input) ? 'block' : 'none';
+            });
+        }
+        function toggleNav() { document.getElementById("navbar").classList.toggle("open"); }
+    </script>
+</body>
+
+</html>

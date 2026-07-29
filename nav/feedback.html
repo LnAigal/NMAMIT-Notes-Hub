@@ -12,7 +12,6 @@
         .content {
             background-color: #fff3db;
             color: #ff0000;
-            text-decoration-line: #000000;
             padding: 20px 0;
             justify-content: center;
             border-bottom: 2px solid #e43131;
@@ -60,13 +59,15 @@ function toggleNav() { document.getElementById("navbar").classList.toggle("open"
                     <li><a href="qna.html"><i class="fas fa-question-circle"></i> Q&A</a></li>
                     <li><a href="contribute.html"><i class="fas fa-donate"></i> Contribute</a></li>
                 </ul>
+            </div>
         </nav>
     </div>
-    <div style="width: 95%; height: 100vh;">
-        <iframe src="https://forms.gle/ayDgW7fXScALBAcv5" 
-                width="100%" height="100%" style="border: none;">
-            Loading…
-        </iframe>
+    <div style="text-align: center; margin: 20px 0;">
+        <p>Click the button below to open the feedback form:</p>
+        <a href="https://forms.gle/ayDgW7fXScALBAcv5" target="_blank" rel="noopener" 
+           style="display: inline-block; padding: 15px 30px; background: linear-gradient(to right, #000000, #fd2828); color: white; text-decoration: none; border-radius: 8px; font-size: 1.1em;">
+            Open Feedback Form
+        </a>
     </div>
     
     <footer>
