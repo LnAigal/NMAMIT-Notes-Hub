@@ -124,7 +124,6 @@ nav div {
     list-style: none;
     display: flex;
     padding: 15px;
-    padding-bottom: 0px;
     margin: 0;
     top: auto;
     position: sticky;
