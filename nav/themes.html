@@ -348,7 +348,7 @@
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 60px 20px 20px 20px;
             background-color: var(--body-bg-color);
             color: var(--body-text-color);
             display: flex;
@@ -356,6 +356,62 @@
             align-items: center;
             min-height: 100vh;
             transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav {
+            position: relative;
+            width: 100%;
+        }
+
+        nav div {
+            background: linear-gradient(to right, #000000, #fd2828);
+            border-radius: 8px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            padding: 12px 15px;
+            cursor: pointer;
+            text-align: left;
+            width: 100%;
+        }
+
+        .navbar {
+            max-width: 100%;
+            list-style: none;
+            display: flex;
+            padding: 15px;
+            margin: 0;
+            top: auto;
+            position: sticky;
+            z-index: 9999;
+            justify-content: center;
+        }
+
+        .navbar li {
+            margin: 0 1px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 0.95em;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
         }
 
         h1 {
@@ -439,7 +495,47 @@
             transition: color 0.3s ease;
         }
 
+        @media (max-width: 768px) {
+            body {
+                padding: 52px 20px 20px 20px;
+            }
+
+            nav div {
+                max-width: 100%;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .navbar {
+                display: none;
+                flex-direction: column;
+                padding: 0;
+                width: 100%;
+            }
+
+            .navbar.open {
+                display: flex;
+            }
+
+            .navbar li {
+                margin: 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .navbar a {
+                display: block;
+                padding: 12px 15px;
+                max-width: 100%;
+            }
+        }
+
         @media (max-width: 600px) {
+            body {
+                padding: 48px 15px 15px 15px;
+            }
+
             .theme-grid {
                 grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
             }
@@ -522,9 +618,28 @@
 
             highlightActiveTheme(storedTheme); // Highlight the initially active theme
         });
+
+        function toggleNav() {
+            document.getElementById('navbar').classList.toggle('open');
+        }
     </script>
 </head>
 <body>
+    <nav>
+        <div>
+            <button class="hamburger" onclick="toggleNav()" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar" id="navbar">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="updates.html"><i class="fas fa-sync-alt"></i> Updates</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="qna.html"><i class="fas fa-question-circle"></i> Q&A</a></li>
+                <li><a href="contribute.html"><i class="fas fa-donate"></i> Contribute</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <h1>Choose Your Notes Hub Theme</h1>
 
     <div class="theme-container">

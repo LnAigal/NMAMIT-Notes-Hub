@@ -30,9 +30,9 @@
             background-size: cover;
             background-position: center;
             margin: 0;
-            padding: 20px;
+            padding: 60px 20px 20px 20px;
             text-align: center;
-            color: #ffffff;
+            color: #000000;
             opacity: 0;
             animation: fadeIn 1.5s ease-in-out forwards;
         }
@@ -50,9 +50,10 @@ header {
         }
 
         header h1 {
-             font-weight: 900; /* ✅ Super thick */
+             font-weight: 900;
       letter-spacing: 2px;
       margin: 0;
+      font-size: clamp(1.5em, 5vw, 2.5em);
         }
         
         h3 {
@@ -141,6 +142,11 @@ header {
             transform: scale(1.05);
         }
 
+        .semester-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
         .search-container {
             margin: 20px 0;
         }
@@ -269,6 +275,10 @@ header {
         }
 
         @media (max-width: 768px) {
+            body {
+                padding: 52px 10px 10px 10px;
+            }
+
             .hamburger {
                 display: block;
             }
@@ -310,13 +320,13 @@ header {
             header h1 {
                 font-size: clamp(1.3em, 5vw, 2.5em);
             }
-
-            body {
-                padding: 10px;
-            }
         }
 
         @media (max-width: 480px) {
+            body {
+                padding: 48px 8px 8px 8px;
+            }
+
             header {
                 padding: 12px 0;
             }
@@ -414,53 +424,13 @@ header {
                 </ul>
             </div>
         </nav>
+    <div class="semester-container">
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Search Course or Course Code" onkeyup="filterCourses()" />
     </div>
 
     <h3 class="available-pdfs">Available Courses:</h3>
-    <div class="menu" id="menuList">
-        <div class="menu-item">
-            <button onclick="window.location.href='../subjects/ADLD/0.html'">APPLIED DIGITAL LOGIC  DESIGN</button>
-            <button onclick="window.location.href='../subjects/ADLD/0.html'">EC1002-2</button>
-        </div>
-        <div class="menu-item">
-            <button onclick="window.location.href='../subjects/BEE/0.html'">BASIC ELECTRICAL ENGINEERING</button>
-            <button onclick="window.location.href='../subjects/BEE/0.html'">EE1001-2</button>
-        </div>
-        <div class="menu-item">
-            <button onclick="window.location.href='../subjects/BfE/0.html'">BIOLOGY FOR ENGINEERS</button>
-            <button onclick="window.location.href='../subjects/BfE/0.html'">BT1651-1</button>
-        </div>
-        <div class="menu-item">
-            <button onclick="window.location.href='../subjects/DMTT/0.html'">DISCRETE MATHEMATICS AND TRANSFORM TECNIQUES</button>
-            <button onclick="window.location.href='../subjects/DMTT/0.html'">MA1007-1</button>
-        </div>
-        <div class="menu-item">
-            <button onclick="window.location.href='../subjects/EV/0.html'">ENGINEERING VISUALIZATION</button>
-            <button onclick="window.location.href='../subjects/EV/0.html'">ME1004-1</button>
-        </div>
-        <div class="menu-item">
-            <button onclick="window.location.href='../subjects/EVS/0.html'">ENVIRONMENTAL STUDIES AND SUSTAINABILITY</button>
-            <button onclick="window.location.href='../subjects/EVS/0.html'">CV1005-1</button>
-        </div>
-        <div class="menu-item">
-            <button onclick="window.location.href='../subjects/IPP/0.html'">INTRODUCTION TO PYTHON PROGRAMMING</button>
-            <button onclick="window.location.href='../subjects/IPP/0.html'">CS1005-2</button>
-        </div>
-        <div class="menu-item">
-            <button onclick="window.location.href='../subjects/MCfCS/0.html'">MATERIAL CHEMISTRY FOR COMPUTERR SYSTEMS</button>
-            <button onclick="window.location.href='../subjects/MCfCS/0.html'">CY1003-1</button>
-        </div>
-        <div class="menu-item">
-            <button onclick="window.location.href='../subjects/TE/0.html'">TECHNICAL ENGLISH</button>
-            <button onclick="window.location.href='../subjects/TE/0.html'">HU1001-1</button>
-        </div>
-        <div class="menu-item">
-            <button onclick="window.location.href='../subjects/COI/0.html'">CONSTITUTION OF INDIA</button>
-            <button onclick="window.location.href='../subjects/COI/0.html'">HU1002-1</button>
-        </div>
-            
+    <div class="menu" id="menuList"></div>
     </div>
     </div>
     <footer>

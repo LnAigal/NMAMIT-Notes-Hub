@@ -139,7 +139,7 @@ nav div {
 .navbar a {
     text-decoration: none;
     color: white;
-    padding: 5%;
+    padding: 15px;
     max-width: 90%;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -220,7 +220,7 @@ nav div {
     }
 
     .pdf-link {
-        padding: 10px;
+        padding: 12px;
         font-size: 0.9em;
     }
 

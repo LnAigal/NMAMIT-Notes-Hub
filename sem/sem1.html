@@ -20,7 +20,7 @@
             font-family: 'Arial', sans-serif;
             background-color: #fff3eb;
             margin: 0;
-            padding: 0;
+            padding: 60px 0 0 0;
             text-align: center;
             color: #000000;
             opacity: 0;
@@ -120,6 +120,11 @@
         }
         button:hover { opacity: 0.8; transform: scale(1.05); }
 
+        .semester-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
         .search-container { margin: 20px 0; }
         input[type="text"] {
             width: 75%;
@@ -145,6 +150,10 @@
         .back-button:hover { opacity: 0.8; transform: scale(1.05); }
 
         @media (max-width: 768px) {
+            body {
+                padding-top: 52px;
+            }
+
             .hamburger {
                 display: block;
             }
@@ -189,6 +198,10 @@
         }
 
         @media (max-width: 480px) {
+            body {
+                padding-top: 48px;
+            }
+
             header {
                 padding: 12px 0;
             }
@@ -232,6 +245,7 @@
         </nav>
    
 
+    <div class="semester-container">
     <!-- Search -->
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Search Course or Course Code" onkeyup="filterCourses()" />
@@ -240,6 +254,7 @@
     <!-- Course List -->
     <h3 class="available-pdfs">Available Courses:</h3>
     <div class="menu" id="menuList"></div>
+    </div>
 
     <!-- Footer -->
     <footer>
