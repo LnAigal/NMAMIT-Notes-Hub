@@ -7,14 +7,13 @@
     <meta name="google-site-verification" content="TtNL9G3o7P5iHPxrK_N3kUJvanidGTUtzKgATR0jWzA" />
     <meta name="description" content="NMAMIT Notes Hub for NMAMIT IT Students." />
     <meta name="keywords" content="nmamit notes hub, nmamit laksh,notes hub by laksh" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <title>NMAMIT NOTES HUB</title>
     <style>
       body {
         font-family: "Arial", sans-serif;
         background-color: #fff3eb;
         margin: 0;
-        padding: 60px 20px 20px 20px;
+        padding: 20px;
         text-align: center;
         color: #000000;
       }
@@ -34,61 +33,6 @@
 
       h4 {
         color: black;
-      }
-
-      nav {
-          position: relative;
-      }
-
-      nav div {
-          background: linear-gradient(to right, #000000, #fd2828);
-          border-radius: 8px;
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          z-index: 1000;
-      }
-
-      .hamburger {
-          display: none;
-          background: none;
-          border: none;
-          color: white;
-          font-size: 1.5em;
-          padding: 12px 15px;
-          cursor: pointer;
-          text-align: left;
-          width: 100%;
-      }
-
-      .navbar {
-          max-width: 100%;
-          list-style: none;
-          display: flex;
-          padding: 15px;
-          margin: 0;
-          top: auto;
-          position: sticky;
-          z-index: 9999;
-          justify-content: center;
-      }
-
-      .navbar li {
-          margin: 0 1px;
-      }
-
-      .navbar a {
-          text-decoration: none;
-          color: white;
-          padding: 10px 15px;
-          border-radius: 5px;
-          transition: background-color 0.3s ease;
-          font-size: 0.95em;
-      }
-
-      .navbar a:hover {
-          background-color: rgba(255, 255, 255, 0.2);
       }
 
       .container {
@@ -179,36 +123,7 @@
 
       @media (max-width: 768px) {
         body {
-          padding: 52px 10px 10px 10px;
-        }
-
-        nav div {
-            max-width: 100%;
-        }
-
-        .hamburger {
-            display: block;
-        }
-
-        .navbar {
-            display: none;
-            flex-direction: column;
-            padding: 0;
-        }
-
-        .navbar.open {
-            display: flex;
-        }
-
-        .navbar li {
-            margin: 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .navbar a {
-            display: block;
-            padding: 12px 15px;
-            max-width: 100%;
+          padding: 10px;
         }
 
         header {
@@ -233,7 +148,7 @@
 
       @media (max-width: 480px) {
         body {
-          padding: 48px 8px 8px 8px;
+          padding: 8px;
         }
 
         header {
@@ -264,11 +179,6 @@
         }
       }
     </style>
-    <script>
-        function toggleNav() {
-            document.getElementById('navbar').classList.toggle('open');
-        }
-    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ7R2JQ63Q"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -283,21 +193,6 @@
     <header>
       <h1>NMAMIT NOTES HUB</h1>
     </header>
-
-      <nav>
-          <div>
-              <button class="hamburger" onclick="toggleNav()" aria-label="Toggle navigation">
-                  <i class="fas fa-bars"></i>
-              </button>
-              <ul class="navbar" id="navbar">
-                  <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                  <li><a href="nav/updates.html"><i class="fas fa-sync-alt"></i> Updates</a></li>
-                  <li><a href="nav/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-                  <li><a href="nav/qna.html"><i class="fas fa-question-circle"></i> Q&A</a></li>
-                  <li><a href="nav/contribute.html"><i class="fas fa-donate"></i> Contribute</a></li>
-              </ul>
-          </div>
-      </nav>
 
     <!-- <div class="feedback-item">
       <button onclick="window.location.href='nav/feedback.html'">FEEDBACK FORM</button>

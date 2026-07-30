@@ -20,7 +20,7 @@
             font-family: 'Arial', sans-serif;
             background-color: #fff3eb;
             margin: 0;
-            padding: 60px 0 0 0;
+            padding: 0;
             text-align: center;
             color: #000000;
             opacity: 0;
@@ -55,7 +55,7 @@
 
         nav div {
             background: linear-gradient(to right, #000000, #fd2828);
-            position: fixed;
+            position: sticky;
             top: 0;
             width: 100%;
             z-index: 1000;
@@ -150,10 +150,6 @@
         .back-button:hover { opacity: 0.8; transform: scale(1.05); }
 
         @media (max-width: 768px) {
-            body {
-                padding-top: 52px;
-            }
-
             .hamburger {
                 display: block;
             }
@@ -198,10 +194,6 @@
         }
 
         @media (max-width: 480px) {
-            body {
-                padding-top: 48px;
-            }
-
             header {
                 padding: 12px 0;
             }
